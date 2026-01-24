@@ -32,7 +32,7 @@ Quiero cotizar control de plagas.
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form.form");
+  const form = document.querySelector("#contactForm");
   if (!form) return;
 
   form.addEventListener("submit", async (e) => {
@@ -44,14 +44,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const res = await fetch(form.action, {
         method: "POST",
         body: formData,
-        headers: { "Accept": "application/json" }
+        headers: {
+          Accept: "application/json"
+        }
       });
 
       if (res.ok) {
-        // ✅ Redirección a tu propia página
-        window.location.href = "/gracias.html";
+        // ✅ Redirección FINAL a TU página
+        window.location.href = "gracias.html";
       } else {
-        // ❌ Algo falló (Formspree rechazó)
         alert("No se pudo enviar el formulario. Intenta nuevamente.");
       }
     } catch (err) {
@@ -59,3 +60,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
