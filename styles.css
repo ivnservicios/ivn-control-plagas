@@ -285,3 +285,57 @@ input:focus, textarea:focus{
   background:#eaf6ee;
   border-radius:12px;
 }
+
+/* Servicios con icono */
+.box.servicio{
+  position: relative;
+  padding-right: 90px; /* espacio para el icono */
+}
+
+.servicio-icon{
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 55px;
+  height: auto;
+}
+
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.contact-item strong {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-item i {
+  color: #2e7d32; /* verde IVN */
+  font-size: 1.1rem;
+}
+
+.contact-item a {
+  color: #1a0dab;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.note {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.alert-icon {
+  font-size: 1.2rem;
+}
