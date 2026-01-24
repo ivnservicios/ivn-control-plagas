@@ -30,3 +30,32 @@ Quiero cotizar control de plagas.
   const url = "https://wa.me/56958829194?text=" + encodeURIComponent(text);
   window.open(url, "_blank", "noopener");
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form.form");
+  if (!form) return;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (res.ok) {
+        // ✅ Redirección a tu propia página
+        window.location.href = "/gracias.html";
+      } else {
+        // ❌ Algo falló (Formspree rechazó)
+        alert("No se pudo enviar el formulario. Intenta nuevamente.");
+      }
+    } catch (err) {
+      alert("Error de conexión. Intenta nuevamente.");
+    }
+  });
+});
