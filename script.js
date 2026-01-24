@@ -1,38 +1,48 @@
-const toggle = document.querySelector(".nav__toggle");
-const menu = document.querySelector(".nav__menu");
+// ========= MENU (seguro, no se rompe si no existe) =========
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".nav__toggle, .menu-btn"); // soporta ambas clases
+  const menu = document.querySelector(".nav__menu, #menu");
 
-toggle.addEventListener("click", () => {
-  const isOpen = menu.classList.toggle("open");
-  toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-});
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("open");
+    });
 
-menu.querySelectorAll("a").forEach(a => {
-  a.addEventListener("click", () => menu.classList.remove("open"));
-});
+    // Cierra al hacer click en un link del menú
+    menu.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => menu.classList.remove("open"));
+    });
+  }
 
-document.getElementById("year").textContent = new Date().getFullYear();
+  // ========= AÑO FOOTER (si existe) =========
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
 
-// Enviar WhatsApp con mensaje armado
-document.getElementById("sendWA").addEventListener("click", () => {
-  const name = document.getElementById("name").value.trim();
-  const place = document.getElementById("place").value.trim();
-  const msg = document.getElementById("msg").value.trim();
+  // ========= BOTÓN WHATSAPP (si existe) =========
+  const sendWA = document.getElementById("sendWA");
+  if (sendWA) {
+    sendWA.addEventListener("click", () => {
+      const name = document.querySelector('input[name="name"]')?.value?.trim() || "";
+      const phone = document.querySelector('input[name="phone"]')?.value?.trim() || "";
+      const place = document.querySelector('input[name="place"]')?.value?.trim() || "";
+      const msg = document.querySelector('textarea[name="message"]')?.value?.trim() || "";
 
-  const text =
-`Hola, soy ${name || "___"}.
-Quiero cotizar control de plagas.
-
-📍 Comuna/Dirección: ${place || "___"}
-🐛 Problema: ${msg || "___"}
+      const text =
+`Hola, quiero cotizar control de plagas.
+👤 Nombre: ${name || "-"}
+📞 Teléfono/WhatsApp: ${phone || "-"}
+📍 Comuna/Dirección: ${place || "-"}
+🐞 Problema: ${msg || "-"}
 
 ¿Me pueden indicar disponibilidad y valor?`;
 
-  const url = "https://wa.me/56958829194?text=" + encodeURIComponent(text);
-  window.open(url, "_blank", "noopener");
-});
+      const url = "https://wa.me/56958829194?text=" + encodeURIComponent(text);
+      window.open(url, "_blank", "noopener");
+    });
+  }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("#contactForm");
+  // ========= FORMULARIO (captura submit y redirige a TU gracias.html) =========
+  const form = document.querySelector("form.form");
   if (!form) return;
 
   form.addEventListener("submit", async (e) => {
@@ -44,14 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const res = await fetch(form.action, {
         method: "POST",
         body: formData,
-        headers: {
-          Accept: "application/json"
-        }
+        headers: { "Accept": "application/json" },
       });
 
       if (res.ok) {
-        // ✅ Redirección FINAL a TU página
-        window.location.href = "gracias.html";
+        // ✅ Redirección a tu página (sin pasar por thank-you de Formspree)
+        window.location.href = "/gracias.html";
       } else {
         alert("No se pudo enviar el formulario. Intenta nuevamente.");
       }
@@ -60,4 +68,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
