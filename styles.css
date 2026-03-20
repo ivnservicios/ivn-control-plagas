@@ -205,6 +205,9 @@ p{margin:0 0 12px}
   color:var(--muted);
   font-size:.95rem;
 }
+.form label.has-error{
+  color:#b91c1c;
+}
 input, textarea{
   width:100%;
   margin-top:6px;
@@ -218,6 +221,22 @@ input, textarea{
 input:focus, textarea:focus{
   border-color:rgba(22,163,74,.45);
   box-shadow: 0 0 0 3px rgba(34,197,94,.18);
+}
+.form input.is-invalid,
+.form textarea.is-invalid{
+  border-color:#dc2626;
+  background:#fff7f7;
+  box-shadow: 0 0 0 3px rgba(220,38,38,.12);
+}
+.form__feedback{
+  margin:10px 0 0;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid rgba(220,38,38,.25);
+  background:#fff5f5;
+  color:#b91c1c;
+  font-size:.95rem;
+  font-weight:600;
 }
 .form .btn{width:100%; margin-top:6px}
 
