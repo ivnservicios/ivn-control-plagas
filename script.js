@@ -19,6 +19,144 @@ document.addEventListener("DOMContentLoaded", () => {
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
+  if (!document.querySelector(".wa-float")) {
+    const whatsappFloat = document.createElement("a");
+    whatsappFloat.className = "wa-float";
+    whatsappFloat.href = "https://wa.me/56958829194";
+    whatsappFloat.target = "_blank";
+    whatsappFloat.rel = "noopener noreferrer";
+    whatsappFloat.setAttribute("aria-label", "Escribir por WhatsApp");
+    whatsappFloat.innerHTML = `
+      <span class="wa-float__icon" aria-hidden="true">
+        <i class="fa-brands fa-whatsapp"></i>
+      </span>
+      <span class="wa-float__text">WhatsApp</span>
+    `;
+    document.body.appendChild(whatsappFloat);
+  }
+
+  const reviewCarousel = document.querySelector("[data-review-carousel]");
+  if (reviewCarousel) {
+    const viewport = reviewCarousel.querySelector(".review-carousel__viewport");
+    const track = reviewCarousel.querySelector("[data-review-track]");
+    const cards = track ? Array.from(track.querySelectorAll(".review-card")) : [];
+    const prevButton = reviewCarousel.querySelector("[data-review-prev]");
+    const nextButton = reviewCarousel.querySelector("[data-review-next]");
+    const dotsContainer = reviewCarousel.querySelector("[data-review-dots]");
+    let currentIndex = 0;
+    let autoPlayId = null;
+    let dots = [];
+
+    const updateReviewDots = () => {
+      dots.forEach((dot, index) => {
+        dot.classList.toggle("is-active", index === currentIndex);
+      });
+    };
+
+    const updateReviewPosition = () => {
+      if (!track || cards.length === 0) return;
+      const offset = cards[currentIndex]?.offsetLeft || 0;
+      track.style.transform = `translateX(-${offset}px)`;
+      updateReviewDots();
+    };
+
+    const goToReview = (index) => {
+      if (!track || cards.length === 0) return;
+
+      if (index < 0) {
+        currentIndex = cards.length - 1;
+      } else if (index >= cards.length) {
+        currentIndex = 0;
+      } else {
+        currentIndex = index;
+      }
+
+      updateReviewPosition();
+    };
+
+    const stopAutoPlay = () => {
+      if (autoPlayId) {
+        window.clearInterval(autoPlayId);
+        autoPlayId = null;
+      }
+    };
+
+    const startAutoPlay = () => {
+      if (cards.length <= 1) return;
+      stopAutoPlay();
+      autoPlayId = window.setInterval(() => {
+        goToReview(currentIndex + 1);
+      }, 5000);
+    };
+
+    const resetAutoPlay = () => {
+      stopAutoPlay();
+      startAutoPlay();
+    };
+
+    if (dotsContainer) {
+      dotsContainer.innerHTML = "";
+      dots = cards.map((_, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "review-carousel__dot";
+        dot.setAttribute("aria-label", `Ir a resena ${index + 1}`);
+        dot.addEventListener("click", () => {
+          goToReview(index);
+          resetAutoPlay();
+        });
+        dotsContainer.appendChild(dot);
+        return dot;
+      });
+    }
+
+    prevButton?.addEventListener("click", () => {
+      goToReview(currentIndex - 1);
+      resetAutoPlay();
+    });
+
+    nextButton?.addEventListener("click", () => {
+      goToReview(currentIndex + 1);
+      resetAutoPlay();
+    });
+
+    reviewCarousel.addEventListener("mouseenter", stopAutoPlay);
+    reviewCarousel.addEventListener("mouseleave", startAutoPlay);
+    reviewCarousel.addEventListener("focusin", stopAutoPlay);
+    reviewCarousel.addEventListener("focusout", () => {
+      if (!reviewCarousel.contains(document.activeElement)) {
+        startAutoPlay();
+      }
+    });
+
+    let touchStartX = 0;
+
+    track?.addEventListener("touchstart", (event) => {
+      touchStartX = event.touches[0]?.clientX || 0;
+      stopAutoPlay();
+    }, { passive: true });
+
+    track?.addEventListener("touchend", (event) => {
+      const touchEndX = event.changedTouches[0]?.clientX || 0;
+      const delta = touchEndX - touchStartX;
+
+      if (Math.abs(delta) > 40) {
+        goToReview(currentIndex + (delta < 0 ? 1 : -1));
+      }
+
+      startAutoPlay();
+    }, { passive: true });
+
+    window.addEventListener("resize", () => {
+      if (viewport?.offsetParent !== null) {
+        updateReviewPosition();
+      }
+    });
+
+    updateReviewPosition();
+    startAutoPlay();
+  }
+
   const sendWA = document.getElementById("sendWA");
   if (sendWA) {
     sendWA.addEventListener("click", () => {
