@@ -24,6 +24,10 @@ El sitio esta orientado a SEO local, generacion de contactos por WhatsApp y form
 - `control-de-plagas-maipu.html`
 - `control-de-plagas-providencia.html`
 - `control-de-plagas-las-condes.html`
+- `control-de-plagas-santiago-centro.html`
+- `control-de-plagas-nunoa.html`
+- `control-de-plagas-la-florida.html`
+- `control-de-plagas-puente-alto.html`
 - `gracias.html`
 - `404.html`
 
