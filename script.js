@@ -19,6 +19,59 @@ document.addEventListener("DOMContentLoaded", () => {
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
+  const pageContext = () => ({
+    page_title: document.title,
+    page_path: window.location.pathname,
+    page_url: window.location.href,
+    page_h1: document.querySelector("h1")?.textContent?.trim() || "",
+    referrer: document.referrer || "directo"
+  });
+
+  const analyticsId = document.querySelector('meta[name="google-analytics-id"]')?.content?.trim() || "G-GFX96N4X42";
+  if (analyticsId && /^G-[A-Z0-9]+$/i.test(analyticsId)) {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function gtag(){ window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", analyticsId);
+
+    if (!document.querySelector(`script[src*="googletagmanager.com/gtag/js?id=${analyticsId}"]`)) {
+      const analyticsScript = document.createElement("script");
+      analyticsScript.async = true;
+      analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(analyticsId)}`;
+      document.head.appendChild(analyticsScript);
+    }
+  }
+
+  const trackEvent = (eventName, params = {}) => {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", eventName, {
+        ...pageContext(),
+        ...params
+      });
+      return true;
+    }
+
+    return false;
+  };
+
+  const setHiddenField = (formElement, name, value) => {
+    let field = formElement.querySelector(`input[name="${name}"]`);
+    if (!field) {
+      field = document.createElement("input");
+      field.type = "hidden";
+      field.name = name;
+      formElement.appendChild(field);
+    }
+
+    field.value = value || "";
+  };
+
+  const updateLeadContext = (formElement) => {
+    const context = pageContext();
+    Object.entries(context).forEach(([name, value]) => setHiddenField(formElement, name, value));
+    setHiddenField(formElement, "lead_source", "sitio_web");
+  };
+
   if (!document.querySelector(".wa-float")) {
     const whatsappFloat = document.createElement("a");
     whatsappFloat.className = "wa-float";
@@ -34,6 +87,24 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     document.body.appendChild(whatsappFloat);
   }
+
+  document.querySelectorAll('a[href^="https://wa.me/"]').forEach((link) => {
+    link.addEventListener("click", () => {
+      trackEvent("click_whatsapp", {
+        link_text: link.textContent.trim(),
+        link_url: link.href
+      });
+    });
+  });
+
+  document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+    link.addEventListener("click", () => {
+      trackEvent("click_email", {
+        link_text: link.textContent.trim(),
+        link_url: link.href
+      });
+    });
+  });
 
   const reviewCarousel = document.querySelector("[data-review-carousel]");
   if (reviewCarousel) {
@@ -175,12 +246,18 @@ Problema: ${msg || "-"}
 Me pueden indicar disponibilidad y valor?`;
 
       const url = "https://wa.me/56958829194?text=" + encodeURIComponent(text);
+      trackEvent("click_whatsapp_form_helper", {
+        contact_place: place,
+        contact_problem: msg
+      });
       window.open(url, "_blank", "noopener");
     });
   }
 
   const form = document.querySelector("form.form");
   if (!form) return;
+  updateLeadContext(form);
+
   const feedback = document.getElementById("formFeedback");
   const requiredFields = Array.from(form.querySelectorAll("input[required], textarea[required]"));
 
@@ -233,11 +310,15 @@ Me pueden indicar disponibilidad y valor?`;
 
     if (invalidFields.length > 0) {
       showFeedback("Completa todos los campos antes de enviar la cotizacion.");
+      trackEvent("form_validation_error", {
+        missing_fields: invalidFields.map((field) => field.name).join(",")
+      });
       invalidFields[0].focus();
       return;
     }
 
     clearFeedback();
+    updateLeadContext(form);
 
     const formData = new FormData(form);
 
@@ -249,11 +330,30 @@ Me pueden indicar disponibilidad y valor?`;
       });
 
       if (response.ok) {
-        window.location.href = "/gracias.html";
+        const redirectToThanks = () => {
+          window.location.href = "/gracias.html";
+        };
+        const wasTracked = trackEvent("generate_lead", {
+          method: "formspree"
+        });
+
+        if (wasTracked) {
+          window.setTimeout(redirectToThanks, 500);
+        } else {
+          redirectToThanks();
+        }
       } else {
+        trackEvent("form_submit_error", {
+          method: "formspree",
+          status: response.status
+        });
         alert("No se pudo enviar el formulario. Intenta nuevamente.");
       }
     } catch (error) {
+      trackEvent("form_submit_error", {
+        method: "formspree",
+        status: "network"
+      });
       alert("Error de conexion. Intenta nuevamente.");
     }
   });

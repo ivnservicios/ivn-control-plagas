@@ -1,29 +1,60 @@
-# IVN Servicios – Control de Plagas
+# IVN Servicios - Control de Plagas
 
-Sitio web **One Page** desarrollado para **IVN Servicios**, enfocado en la presentación de servicios de control de plagas, contacto directo por WhatsApp y formulario de cotización.
+Sitio web estatico para **IVN Servicios**, enfocado en control de plagas en Santiago, Region Metropolitana y alrededores.
 
-El proyecto está pensado para ser **simple, rápido y profesional**, utilizando tecnologías web básicas y hosting gratuito mediante **GitHub Pages**.
+El sitio esta orientado a SEO local, generacion de contactos por WhatsApp y formulario de cotizacion mediante Formspree.
 
----
+## Servicios destacados
 
-## 🌿 Servicios destacados
-- Control de roedores (ratones)
-- Control de termitas
-- Control de palomas (aves)
-- Control de chinches
-- Cucarachas, hormigas, arañas, pulgas y moscas
-- Atención a hogares y empresas
-- Cobertura en **Región Metropolitana y alrededores**
+- Desratizacion y control de ratones.
+- Desinsectacion y control de cucarachas, hormigas, aranas, pulgas y moscas.
+- Control de chinches.
+- Sanitizacion y desinfeccion de espacios.
+- Atencion a hogares, empresas, condominios, restaurantes, locales y bodegas.
 
----
+## Paginas principales
 
-## 🛠️ Tecnologías utilizadas
+- `index.html`
+- `desratizacion-santiago.html`
+- `desinsectacion-santiago.html`
+- `sanitizacion-santiago.html`
+- `control-de-ratones-santiago.html`
+- `control-de-cucarachas-santiago.html`
+- `control-de-chinches-santiago.html`
+- `control-de-plagas-maipu.html`
+- `control-de-plagas-providencia.html`
+- `control-de-plagas-las-condes.html`
+- `gracias.html`
+- `404.html`
+
+## Desarrollo local
+
+Desde la raíz del proyecto:
+
+```powershell
+python -m http.server 8080 --bind 127.0.0.1
+```
+
+Luego abrir:
+
+```text
+http://127.0.0.1:8080/
+```
+
+## Tecnologias
+
 - HTML5
 - CSS3
 - JavaScript
-- Formspree (envío de formularios sin backend)
-- GitHub Pages (hosting gratuito)
+- Formspree
+- GitHub Pages
 
----
+## Publicacion
 
-## 📁 Estructura del proyecto
+El dominio esta definido en `CNAME`:
+
+```text
+ivnservicios.cl
+```
+
+Antes de publicar cambios, revisar el sitio localmente y confirmar que las paginas incluidas en `sitemap.xml` respondan correctamente.
