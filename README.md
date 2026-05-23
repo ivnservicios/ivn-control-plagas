@@ -21,6 +21,10 @@ El sitio esta orientado a SEO local, generacion de contactos por WhatsApp y form
 - `control-de-ratones-santiago.html`
 - `control-de-cucarachas-santiago.html`
 - `control-de-chinches-santiago.html`
+- `control-de-hormigas-santiago.html`
+- `control-de-aranas-santiago.html`
+- `control-de-pulgas-santiago.html`
+- `fumigacion-santiago.html`
 - `control-de-plagas-maipu.html`
 - `control-de-plagas-providencia.html`
 - `control-de-plagas-las-condes.html`
