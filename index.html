@@ -913,30 +913,53 @@
           </div>
         </div>
 
-        <form class="form" id="contactForm" action="https://formspree.io/f/xeeaqjwk" method="POST" novalidate>
-          <label>Nombre
-            <input type="text" name="name" placeholder="Tu nombre" required>
-          </label>
+        <form class="form quote-form" id="contactForm" action="https://formspree.io/f/xeeaqjwk" method="POST" novalidate>
+          <div class="quote-form__head">
+            <p class="quote-form__eyebrow">Cotizaci&oacute;n gratuita</p>
+            <h3>Cu&eacute;ntanos tu caso</h3>
+            <p>Completa los datos y te contactaremos para orientar el servicio seg&uacute;n comuna, tipo de propiedad y plaga detectada.</p>
+          </div>
 
-          <label>Tel&eacute;fono / WhatsApp
-            <input type="text" name="phone" placeholder="+56 9..." required>
-          </label>
+          <div class="quote-form__grid">
+            <label>Nombre
+              <span class="quote-form__field">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+                <input type="text" name="name" placeholder="Tu nombre" required>
+              </span>
+            </label>
 
-          <label>Comuna
-            <input type="text" name="place" placeholder="Ej: Santiago, Maip&uacute;..." required>
-          </label>
+            <label>Tel&eacute;fono / WhatsApp
+              <span class="quote-form__field">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                <input type="text" name="phone" placeholder="+56 9..." required>
+              </span>
+            </label>
 
-          <label>Plaga / Problema
-            <textarea name="message" rows="4" placeholder="Ej: Ratones en bodega, chinches en dormitorio..." required></textarea>
-          </label>
+            <label>Comuna
+              <span class="quote-form__field">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <input type="text" name="place" placeholder="Ej: Santiago, Maip&uacute;..." required>
+              </span>
+            </label>
+
+            <label class="quote-form__full">Plaga / Problema
+              <span class="quote-form__field quote-form__field--textarea">
+                <i class="fa-solid fa-bug" aria-hidden="true"></i>
+                <textarea name="message" rows="4" placeholder="Ej: Ratones en bodega, chinches en dormitorio..." required></textarea>
+              </span>
+            </label>
+          </div>
 
           <input type="hidden" name="_subject" value="Nueva cotizacion - IVN Servicios">
 
           <p class="form__feedback" id="formFeedback" role="alert" aria-live="polite" hidden></p>
 
-          <button class="btn" type="submit">Enviar cotizaci&oacute;n</button>
+          <button class="btn quote-form__submit" type="submit">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            Enviar cotizaci&oacute;n
+          </button>
 
-          <p class="muted small">Te contactaremos a la brevedad.</p>
+          <p class="quote-form__note">Respuesta a la brevedad. Tus datos se usan solo para coordinar la cotizaci&oacute;n.</p>
         </form>
       </div>
     </section>
