@@ -32,6 +32,12 @@ El sitio esta orientado a SEO local, generacion de contactos por WhatsApp y form
 - `control-de-plagas-nunoa.html`
 - `control-de-plagas-la-florida.html`
 - `control-de-plagas-puente-alto.html`
+- `control-de-plagas-san-miguel.html`
+- `control-de-plagas-macul.html`
+- `control-de-plagas-recoleta.html`
+- `control-de-plagas-independencia.html`
+- `control-de-plagas-quilicura.html`
+- `control-de-plagas-vitacura.html`
 - `gracias.html`
 - `404.html`
 
