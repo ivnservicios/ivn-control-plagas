@@ -139,7 +139,92 @@
       </div>
     </section>
 
-    <section id="contacto" class="section"><div class="container contact"><div class="cta-panel"><div><h2>Cotiza control de hormigas</h2><p class="sub">Indica tu comuna, el tipo de espacio y d&oacute;nde observaste actividad de hormigas.</p></div><div class="card"><div class="contact-item"><strong><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp</strong><a href="https://wa.me/56958829194" target="_blank" rel="noopener noreferrer">+56 9 5882 9194</a></div><div class="contact-item"><strong><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</strong><a href="mailto:fnahuelpan@ivnservicios.cl">fnahuelpan@ivnservicios.cl</a></div><div class="contact-item"><strong><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Cobertura</strong><span>Santiago, RM y alrededores</span></div></div><div class="note"><span class="alert-icon">&#9888;</span><strong>Cotizaci&oacute;n gratuita y sin compromiso para hogares y empresas.</strong></div></div><form class="form" action="https://formspree.io/f/xeeaqjwk" method="POST" novalidate><label>Nombre<input type="text" name="name" placeholder="Tu nombre" required></label><label>Tel&eacute;fono / WhatsApp<input type="text" name="phone" placeholder="+56 9..." required></label><label>Comuna<input type="text" name="place" placeholder="Ej: Santiago, &Ntilde;u&ntilde;oa, La Florida..." required></label><label>Plaga / Problema<textarea name="message" rows="4" placeholder="Ej: hormigas en cocina, patio, muro o local..." required></textarea></label><input type="hidden" name="_subject" value="Nueva cotizacion control de hormigas - IVN Servicios"><p class="form__feedback" id="formFeedback" role="alert" aria-live="polite" hidden></p><button class="btn" type="submit">Enviar cotizaci&oacute;n</button><p class="muted small">Te responderemos a la brevedad.</p></form></div></section>
+    <section id="contacto" class="section">
+      <div class="container contact">
+        <div>
+          <h2>Cotiza control de hormigas</h2>
+          <p class="sub">Indica tu comuna, el tipo de espacio y d&oacute;nde observaste actividad de hormigas.</p>
+
+          <div class="quote-guide" aria-label="Datos recomendados para cotizar">
+            <p class="quote-guide__title">Para cotizar m&aacute;s r&aacute;pido, incluye:</p>
+
+            <ul class="quote-guide__list">
+              <li class="quote-guide__item">
+                <span class="quote-guide__icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                <span>
+                  <strong>Comuna y tipo de propiedad</strong>
+                  <span class="quote-guide__desc">Casa, departamento, local, oficina, bodega, restaurante o comunidad.</span>
+                </span>
+              </li>
+              <li class="quote-guide__item">
+                <span class="quote-guide__icon"><i class="fa-solid fa-bug" aria-hidden="true"></i></span>
+                <span>
+                  <strong>Plaga o se&ntilde;ales detectadas</strong>
+                  <span class="quote-guide__desc">Describe d&oacute;nde aparece el problema y desde cu&aacute;ndo lo notaste.</span>
+                </span>
+              </li>
+              <li class="quote-guide__item">
+                <span class="quote-guide__icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></span>
+                <span>
+                  <strong>Urgencia y disponibilidad</strong>
+                  <span class="quote-guide__desc">Indica si necesitas atenci&oacute;n pronta o una visita programada.</span>
+                </span>
+              </li>
+            </ul>
+
+            <p class="quote-guide__note">Cotizaci&oacute;n gratuita y sin compromiso. Con estos datos podemos orientarte mejor desde el primer contacto.</p>
+          </div>
+        </div>
+
+        <form class="form quote-form" id="contactForm" action="https://formspree.io/f/xeeaqjwk" method="POST" novalidate>
+          <div class="quote-form__head">
+            <p class="quote-form__eyebrow">Cotizaci&oacute;n gratuita</p>
+            <h3>Cu&eacute;ntanos tu caso</h3>
+            <p>Completa los datos y te contactaremos para orientar el servicio seg&uacute;n comuna, tipo de propiedad y plaga detectada.</p>
+          </div>
+
+          <div class="quote-form__grid">
+            <label>Nombre
+              <span class="quote-form__field">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+                <input type="text" name="name" placeholder="Tu nombre" required>
+              </span>
+            </label>
+
+            <label>Tel&eacute;fono / WhatsApp
+              <span class="quote-form__field">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                <input type="text" name="phone" placeholder="+56 9..." required>
+              </span>
+            </label>
+
+            <label>Comuna
+              <span class="quote-form__field">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <input type="text" name="place" placeholder="Ej: Santiago, &Ntilde;u&ntilde;oa, La Florida..." required>
+              </span>
+            </label>
+
+            <label class="quote-form__full">Plaga / Problema
+              <span class="quote-form__field quote-form__field--textarea">
+                <i class="fa-solid fa-bug" aria-hidden="true"></i>
+                <textarea name="message" rows="4" placeholder="Ej: hormigas en cocina, patio, muro o local..." required></textarea>
+              </span>
+            </label>
+          </div>
+
+          <input type="hidden" name="_subject" value="Nueva cotizacion control de hormigas - IVN Servicios">
+          <p class="form__feedback" id="formFeedback" role="alert" aria-live="polite" hidden></p>
+
+          <button class="btn quote-form__submit" type="submit">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            Enviar cotizaci&oacute;n
+          </button>
+
+          <p class="quote-form__note">Respuesta a la brevedad. Tus datos se usan solo para coordinar la cotizaci&oacute;n.</p>
+        </form>
+      </div>
+    </section>
   </main>
   <footer class="footer"><div class="container footer__inner"><span>&copy; <span id="year"></span> IVN Servicios</span><a href="#servicio">Volver arriba &uarr;</a></div></footer>
   <script src="script.js?v=20260523-local"></script>

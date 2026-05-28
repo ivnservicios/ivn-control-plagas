@@ -429,55 +429,87 @@
 
     <section id="contacto" class="section">
       <div class="container contact">
-        <div class="cta-panel">
-          <div>
-            <h2>Cotiza tu desratizaci&oacute;n</h2>
-            <p class="sub">Cu&eacute;ntanos si el problema es en una vivienda, oficina, bodega o local. Te ayudamos a coordinar una evaluaci&oacute;n seg&uacute;n tu caso.</p>
-          </div>
+        <div>
+          <h2>Cotiza tu desratizaci&oacute;n</h2>
+          <p class="sub">Cu&eacute;ntanos si el problema es en una vivienda, oficina, bodega o local. Te ayudamos a coordinar una evaluaci&oacute;n seg&uacute;n tu caso.</p>
 
-          <div class="card">
-            <div class="contact-item">
-              <strong><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp</strong>
-              <a href="https://wa.me/56958829194" target="_blank" rel="noopener noreferrer">+56 9 5882 9194</a>
-            </div>
-            <div class="contact-item">
-              <strong><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</strong>
-              <a href="mailto:fnahuelpan@ivnservicios.cl">fnahuelpan@ivnservicios.cl</a>
-            </div>
-            <div class="contact-item">
-              <strong><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Cobertura</strong>
-              <span>Regi&oacute;n Metropolitana y alrededores</span>
-            </div>
-          </div>
+          <div class="quote-guide" aria-label="Datos recomendados para cotizar">
+            <p class="quote-guide__title">Para cotizar m&aacute;s r&aacute;pido, incluye:</p>
 
-          <div class="note">
-            <span class="alert-icon">&#9888;</span>
-            <strong>Cotizaci&oacute;n gratuita y sin compromiso. Indica la comuna, el tipo de espacio y las se&ntilde;ales que has detectado.</strong>
+            <ul class="quote-guide__list">
+              <li class="quote-guide__item">
+                <span class="quote-guide__icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                <span>
+                  <strong>Comuna y tipo de propiedad</strong>
+                  <span class="quote-guide__desc">Casa, departamento, local, oficina, bodega, restaurante o comunidad.</span>
+                </span>
+              </li>
+              <li class="quote-guide__item">
+                <span class="quote-guide__icon"><i class="fa-solid fa-bug" aria-hidden="true"></i></span>
+                <span>
+                  <strong>Plaga o se&ntilde;ales detectadas</strong>
+                  <span class="quote-guide__desc">Describe d&oacute;nde aparece el problema y desde cu&aacute;ndo lo notaste.</span>
+                </span>
+              </li>
+              <li class="quote-guide__item">
+                <span class="quote-guide__icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></span>
+                <span>
+                  <strong>Urgencia y disponibilidad</strong>
+                  <span class="quote-guide__desc">Indica si necesitas atenci&oacute;n pronta o una visita programada.</span>
+                </span>
+              </li>
+            </ul>
+
+            <p class="quote-guide__note">Cotizaci&oacute;n gratuita y sin compromiso. Con estos datos podemos orientarte mejor desde el primer contacto.</p>
           </div>
         </div>
 
-        <form class="form" action="https://formspree.io/f/xeeaqjwk" method="POST" novalidate>
-          <label>Nombre
-            <input type="text" name="name" placeholder="Tu nombre" required>
-          </label>
+        <form class="form quote-form" id="contactForm" action="https://formspree.io/f/xeeaqjwk" method="POST" novalidate>
+          <div class="quote-form__head">
+            <p class="quote-form__eyebrow">Cotizaci&oacute;n gratuita</p>
+            <h3>Cu&eacute;ntanos tu caso</h3>
+            <p>Completa los datos y te contactaremos para orientar el servicio seg&uacute;n comuna, tipo de propiedad y plaga detectada.</p>
+          </div>
 
-          <label>Tel&eacute;fono / WhatsApp
-            <input type="text" name="phone" placeholder="+56 9..." required>
-          </label>
+          <div class="quote-form__grid">
+            <label>Nombre
+              <span class="quote-form__field">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+                <input type="text" name="name" placeholder="Tu nombre" required>
+              </span>
+            </label>
 
-          <label>Comuna
-            <input type="text" name="place" placeholder="Ej: Santiago, Maip&uacute;..." required>
-          </label>
+            <label>Tel&eacute;fono / WhatsApp
+              <span class="quote-form__field">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                <input type="text" name="phone" placeholder="+56 9..." required>
+              </span>
+            </label>
 
-          <label>Problema detectado
-            <textarea name="message" rows="4" placeholder="Ej: ruidos en entretecho, fecas en bodega, actividad nocturna..." required></textarea>
-          </label>
+            <label>Comuna
+              <span class="quote-form__field">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <input type="text" name="place" placeholder="Ej: Santiago, Maip&uacute;..." required>
+              </span>
+            </label>
+
+            <label class="quote-form__full">Problema detectado
+              <span class="quote-form__field quote-form__field--textarea">
+                <i class="fa-solid fa-bug" aria-hidden="true"></i>
+                <textarea name="message" rows="4" placeholder="Ej: ruidos en entretecho, fecas en bodega, actividad nocturna..." required></textarea>
+              </span>
+            </label>
+          </div>
 
           <input type="hidden" name="_subject" value="Nueva cotizacion desratizacion - IVN Servicios">
           <p class="form__feedback" id="formFeedback" role="alert" aria-live="polite" hidden></p>
 
-          <button class="btn" type="submit">Enviar cotizaci&oacute;n</button>
-          <p class="muted small">Te responderemos a la brevedad para coordinar la atenci&oacute;n.</p>
+          <button class="btn quote-form__submit" type="submit">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            Enviar cotizaci&oacute;n
+          </button>
+
+          <p class="quote-form__note">Respuesta a la brevedad. Tus datos se usan solo para coordinar la cotizaci&oacute;n.</p>
         </form>
       </div>
     </section>
