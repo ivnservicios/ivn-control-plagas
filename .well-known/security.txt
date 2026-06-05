@@ -1,0 +1,5 @@
+Contact: mailto:fnahuelpan@ivnservicios.cl
+Contact: https://wa.me/56958829194
+Preferred-Languages: es, en
+Canonical: https://ivnservicios.cl/.well-known/security.txt
+Expires: 2027-06-01T00:00:00Z
