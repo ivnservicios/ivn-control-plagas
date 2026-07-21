@@ -240,12 +240,30 @@ p{margin:0 0 12px}
 /* Card info rows */
 .mini{margin-top:12px}
 .mini__row{
-  display:flex; justify-content:space-between; align-items:center;
+  display:grid;
+  grid-template-columns:minmax(88px, .8fr) minmax(0, 1.4fr);
+  gap:14px;
+  align-items:start;
   padding:10px 0;
   border-top:1px dashed rgba(15,23,42,.12);
 }
 .mini__row span{color:var(--muted)}
-.mini__row strong{color:var(--text)}
+.mini__row strong{
+  color:var(--text);
+  text-align:right;
+  line-height:1.25;
+  overflow-wrap:anywhere;
+}
+
+@media (max-width: 520px){
+  .mini__row{
+    grid-template-columns:1fr;
+    gap:4px;
+  }
+  .mini__row strong{
+    text-align:left;
+  }
+}
 
 /* GRIDS */
 .grid3{
