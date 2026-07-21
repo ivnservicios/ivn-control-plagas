@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Icono de taza de ba&#241;o</title>
+  <desc id="desc">Icono lineal verde de una taza de ba&#241;o o WC para servicios de limpieza y sanitizaci&#243;n.</desc>
+  <g fill="none" stroke="#4aa447" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22.5 18.5h35.8c4.7 0 8.5 3.8 8.5 8.5v28.2H22.5V18.5Z"/>
+    <path d="M18.6 18.5h52.1"/>
+    <path d="M34.2 28.8h12.6"/>
+    <circle cx="55.8" cy="28.8" r="2.4"/>
+    <path d="M66.8 45.8h35.4c8.8 0 15.9 7.1 15.9 15.9v1.7c0 16.4-13.3 29.7-29.7 29.7H73.7c-16.4 0-29.7-13.3-29.7-29.7v-8.2h22.8"/>
+    <path d="M58.1 55.2h50.6"/>
+    <path d="M62.8 63.9h39.6"/>
+    <path d="M70.7 93.1c2.5 8.7 10.5 15.1 20.1 15.1h16.5c5.3 0 9.6 4.3 9.6 9.6H51.7c0-5.3 4.3-9.6 9.6-9.6h8.9c4.2 0 7.7-3.4 7.7-7.7v-7.4"/>
+    <path d="M31.6 55.2v29.1c0 10.9 8.8 19.7 19.7 19.7h18.9"/>
+    <path d="M25.6 84.3h15.9"/>
+    <path d="M48.1 117.8h70.2"/>
+  </g>
+</svg>
