@@ -10,7 +10,7 @@ El sitio esta orientado a SEO local, generacion de contactos por WhatsApp, formu
 - Dominio configurado en `CNAME`.
 - Hosting mediante GitHub Pages.
 - Sitemap enviado en Search Console: `https://ivnservicios.cl/sitemap.xml`.
-- Sitemap actual con 24 URLs SEO publicables.
+- Sitemap actual con 80 URLs SEO publicables.
 - Google Analytics 4 instalado con ID `G-GFX96N4X42`.
 - Formulario principal conectado a Formspree.
 - Google Business Profile existente y administrado por IVN Servicios.
@@ -69,6 +69,65 @@ El sitio esta orientado a SEO local, generacion de contactos por WhatsApp, formu
 - `control-de-plagas-independencia.html`
 - `control-de-plagas-quilicura.html`
 - `control-de-plagas-vitacura.html`
+- `control-de-plagas-estacion-central.html`
+- `control-de-plagas-pudahuel.html`
+- `control-de-plagas-huechuraba.html`
+- `control-de-plagas-penalolen.html`
+- `control-de-plagas-la-reina.html`
+- `control-de-plagas-lo-barnechea.html`
+- `control-de-plagas-renca.html`
+- `control-de-plagas-san-joaquin.html`
+- `control-de-plagas-conchali.html`
+- `control-de-plagas-la-cisterna.html`
+- `control-de-plagas-san-bernardo.html`
+- `control-de-plagas-el-bosque.html`
+- `control-de-plagas-la-pintana.html`
+- `control-de-plagas-cerrillos.html`
+- `control-de-plagas-quinta-normal.html`
+- `control-de-plagas-cerro-navia.html`
+- `control-de-plagas-lo-prado.html`
+- `control-de-plagas-pedro-aguirre-cerda.html`
+- `control-de-plagas-la-granja.html`
+- `control-de-plagas-san-ramon.html`
+- `control-de-plagas-lo-espejo.html`
+
+### Paginas de aguas servidas
+
+- `limpieza-sanitizacion-aguas-servidas-santiago.html`
+- `limpieza-sanitizacion-aguas-servidas-santiago-centro.html`
+- `limpieza-sanitizacion-aguas-servidas-maipu.html`
+- `limpieza-sanitizacion-aguas-servidas-providencia.html`
+- `limpieza-sanitizacion-aguas-servidas-las-condes.html`
+- `limpieza-sanitizacion-aguas-servidas-nunoa.html`
+- `limpieza-sanitizacion-aguas-servidas-la-florida.html`
+- `limpieza-sanitizacion-aguas-servidas-puente-alto.html`
+- `limpieza-sanitizacion-aguas-servidas-san-miguel.html`
+- `limpieza-sanitizacion-aguas-servidas-macul.html`
+- `limpieza-sanitizacion-aguas-servidas-recoleta.html`
+- `limpieza-sanitizacion-aguas-servidas-independencia.html`
+- `limpieza-sanitizacion-aguas-servidas-quilicura.html`
+- `limpieza-sanitizacion-aguas-servidas-vitacura.html`
+- `limpieza-sanitizacion-aguas-servidas-estacion-central.html`
+- `limpieza-sanitizacion-aguas-servidas-pudahuel.html`
+- `limpieza-sanitizacion-aguas-servidas-huechuraba.html`
+- `limpieza-sanitizacion-aguas-servidas-penalolen.html`
+- `limpieza-sanitizacion-aguas-servidas-la-reina.html`
+- `limpieza-sanitizacion-aguas-servidas-lo-barnechea.html`
+- `limpieza-sanitizacion-aguas-servidas-renca.html`
+- `limpieza-sanitizacion-aguas-servidas-san-joaquin.html`
+- `limpieza-sanitizacion-aguas-servidas-conchali.html`
+- `limpieza-sanitizacion-aguas-servidas-la-cisterna.html`
+- `limpieza-sanitizacion-aguas-servidas-san-bernardo.html`
+- `limpieza-sanitizacion-aguas-servidas-el-bosque.html`
+- `limpieza-sanitizacion-aguas-servidas-la-pintana.html`
+- `limpieza-sanitizacion-aguas-servidas-cerrillos.html`
+- `limpieza-sanitizacion-aguas-servidas-quinta-normal.html`
+- `limpieza-sanitizacion-aguas-servidas-cerro-navia.html`
+- `limpieza-sanitizacion-aguas-servidas-lo-prado.html`
+- `limpieza-sanitizacion-aguas-servidas-pedro-aguirre-cerda.html`
+- `limpieza-sanitizacion-aguas-servidas-la-granja.html`
+- `limpieza-sanitizacion-aguas-servidas-san-ramon.html`
+- `limpieza-sanitizacion-aguas-servidas-lo-espejo.html`
 
 ## Paginas auxiliares
 
@@ -134,7 +193,7 @@ Sitemap activo:
 https://ivnservicios.cl/sitemap.xml
 ```
 
-Al 24 de mayo de 2026, Search Console mostraba el sitemap como correcto y con 24 paginas descubiertas.
+Al 3 de agosto de 2026, el sitemap local queda preparado con 80 URLs SEO publicables. Las URLs nuevas deben solicitarse o monitorearse en Search Console tras el despliegue.
 
 Paginas confirmadas como indexadas durante el trabajo:
 
@@ -217,7 +276,7 @@ Flujo recomendado:
 
 ## Pendientes recomendados
 
-- Seguir monitoreando indexacion de las 24 URLs en Search Console.
+- Seguir monitoreando indexacion de las 80 URLs SEO publicables en Search Console.
 - Solicitar indexacion manual para paginas importantes no indexadas.
 - Mantener Google Business Profile activo con fotos, publicaciones y respuestas a resenas.
 - Agregar mas contenido unico si nuevas comunas empiezan a competir.

@@ -2,349 +2,481 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ivnservicios.cl/</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/desratizacion-santiago.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/desinsectacion-santiago.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/sanitizacion-santiago.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ivnservicios.cl/control-de-plagas-maipu.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://ivnservicios.cl/fumigacion-santiago.html</loc>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ivnservicios.cl/control-de-plagas-providencia.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ivnservicios.cl/control-de-plagas-las-condes.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ivnservicios.cl/control-de-plagas-santiago-centro.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ivnservicios.cl/control-de-plagas-nunoa.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ivnservicios.cl/control-de-plagas-la-florida.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ivnservicios.cl/control-de-plagas-puente-alto.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-ratones-santiago.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-cucarachas-santiago.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-chinches-santiago.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-hormigas-santiago.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-aranas-santiago.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-pulgas-santiago.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ivnservicios.cl/fumigacion-santiago.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://ivnservicios.cl/control-de-plagas-maipu.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/control-de-plagas-providencia.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/control-de-plagas-las-condes.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/control-de-plagas-santiago-centro.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/control-de-plagas-nunoa.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/control-de-plagas-la-florida.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/control-de-plagas-puente-alto.html</loc>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-plagas-san-miguel.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-plagas-macul.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-plagas-recoleta.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-plagas-independencia.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-plagas-quilicura.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-plagas-vitacura.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-plagas-estacion-central.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-plagas-pudahuel.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-plagas-huechuraba.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-plagas-penalolen.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-plagas-la-reina.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-plagas-lo-barnechea.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-plagas-renca.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-plagas-san-joaquin.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-plagas-conchali.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/control-de-plagas-la-cisterna.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/control-de-plagas-san-bernardo.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/control-de-plagas-el-bosque.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/control-de-plagas-la-pintana.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/control-de-plagas-cerrillos.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/control-de-plagas-quinta-normal.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/control-de-plagas-cerro-navia.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/control-de-plagas-lo-prado.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/control-de-plagas-pedro-aguirre-cerda.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/control-de-plagas-la-granja.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/control-de-plagas-san-ramon.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/control-de-plagas-lo-espejo.html</loc>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-santiago.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-santiago-centro.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-maipu.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-providencia.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-las-condes.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-nunoa.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-la-florida.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-puente-alto.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-san-miguel.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-macul.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-recoleta.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-independencia.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-quilicura.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-vitacura.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-estacion-central.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-pudahuel.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-huechuraba.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-penalolen.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-la-reina.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-lo-barnechea.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-renca.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-san-joaquin.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-conchali.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-la-cisterna.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-san-bernardo.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-el-bosque.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-la-pintana.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-cerrillos.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-quinta-normal.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-cerro-navia.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-lo-prado.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-pedro-aguirre-cerda.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-la-granja.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-san-ramon.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-lo-espejo.html</loc>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
