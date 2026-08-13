@@ -217,7 +217,7 @@ Perfil existente:
 - Telefono: `+56 9 5882 9194`
 - WhatsApp: `https://wa.me/56958829194`
 - Sitio web: `https://ivnservicios.cl/`
-- Instagram: `https://www.instagram.com/fumigaciones.ivn/`
+- Instagram: `https://www.instagram.com/ivnservicios.cl/`
 - Cobertura: Region Metropolitana y comunas agregadas en el perfil.
 
 Acciones ya realizadas:
