@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Oficina y puesto de trabajo</title>
+  <g fill="none" stroke="#4aa447" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 76h100M22 76v34m84-34v34M39 76V32h50v34H39m25 0v10M49 110h30M64 91v19M52 91h24M100 52h14v24M107 52V38m0 8c-9 0-12-6-12-11 9 0 12 5 12 11m0-5c0-9 5-13 12-13 0 8-4 13-12 13"/>
+  </g>
+</svg>

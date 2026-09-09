@@ -66,6 +66,21 @@ document.addEventListener("DOMContentLoaded", () => {
     field.value = value || "";
   };
 
+  document.querySelectorAll("[data-frequency]").forEach((link) => {
+    link.addEventListener("click", () => {
+      const frequency = document.querySelector('form[data-service="limpieza-oficinas"] select[name="frequency"]');
+      if (!frequency) return;
+      frequency.value = link.dataset.frequency;
+      frequency.dispatchEvent(new Event("change", { bubbles: true }));
+    });
+  });
+
+  document.querySelectorAll("[data-event]").forEach((link) => {
+    link.addEventListener("click", () => {
+      trackEvent(link.dataset.event, { link_text: link.textContent.trim(), link_url: link.href });
+    });
+  });
+
   const updateLeadContext = (formElement) => {
     const context = pageContext();
     Object.entries(context).forEach(([name, value]) => setHiddenField(formElement, name, value));
@@ -266,8 +281,6 @@ Me pueden indicar disponibilidad y valor?`;
     const label = field.closest("label");
     const isEmpty = value === "";
 
-    if (!isEmpty) field.value = value;
-
     field.classList.toggle("is-invalid", isEmpty);
     field.setAttribute("aria-invalid", String(isEmpty));
     if (label) label.classList.toggle("has-error", isEmpty);
@@ -325,6 +338,8 @@ Me pueden indicar disponibilidad y valor?`;
     try {
       const response = await fetch(form.action, {
         method: "POST",
+        // Formspree uses the origin to validate domain restrictions.
+        referrerPolicy: "strict-origin-when-cross-origin",
         body: formData,
         headers: { Accept: "application/json" }
       });
