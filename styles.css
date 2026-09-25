@@ -1258,3 +1258,16 @@ input:focus, textarea:focus{
   html:has(.office-page) {scroll-behavior:auto}
   .office-page *, .office-page *::before, .office-page *::after {transition:none; animation:none}
 }
+
+/* Accessibility: readable actions, keyboard focus and motion preferences. */
+.btn:not(.btn--ghost), .nav__menu a.btn:not(.btn--ghost){background:#15803d; color:#fff}
+:where(a, button, input, textarea, select, [tabindex]):focus-visible{outline:3px solid #166534; outline-offset:4px}
+:where(main, section, [id]){scroll-margin-top:100px}
+.review-carousel__pause{width:auto; padding:0 14px; font:inherit; font-weight:600}
+.review-carousel__controls{flex-wrap:wrap}
+.skip-link{position:fixed; top:8px; left:8px; z-index:1000; padding:12px 18px; background:#fff; color:#0f172a; transform:translateY(-180%); border:2px solid #166534; border-radius:8px}
+.skip-link:focus{transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *, *::before, *::after{animation:none !important; transition:none !important; scroll-behavior:auto !important}
+}

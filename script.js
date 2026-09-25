@@ -159,6 +159,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const prevButton = reviewCarousel.querySelector("[data-review-prev]");
     const nextButton = reviewCarousel.querySelector("[data-review-next]");
     const dotsContainer = reviewCarousel.querySelector("[data-review-dots]");
+    const pauseButton = reviewCarousel.querySelector("[data-review-pause]");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let userPaused = false;
     let currentIndex = 0;
     let autoPlayId = null;
     let dots = [];
@@ -198,8 +201,8 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const startAutoPlay = () => {
-      if (cards.length <= 1) return;
       stopAutoPlay();
+      if (cards.length <= 1 || userPaused || reducedMotion.matches || document.hidden || reviewCarousel.matches(":hover") || reviewCarousel.contains(document.activeElement)) return;
       autoPlayId = window.setInterval(() => {
         goToReview(currentIndex + 1);
       }, 5000);
@@ -236,6 +239,19 @@ document.addEventListener("DOMContentLoaded", () => {
       resetAutoPlay();
     });
 
+    pauseButton?.addEventListener("click", () => {
+      userPaused = !userPaused;
+      pauseButton.textContent = userPaused ? "Reanudar" : "Pausar";
+      pauseButton.setAttribute("aria-pressed", String(userPaused));
+      startAutoPlay();
+    });
+    const updateMotionPreference = () => {
+      if (pauseButton) pauseButton.hidden = reducedMotion.matches;
+      startAutoPlay();
+    };
+    reducedMotion.addEventListener("change", updateMotionPreference);
+    document.addEventListener("visibilitychange", startAutoPlay);
+    updateMotionPreference();
     reviewCarousel.addEventListener("mouseenter", stopAutoPlay);
     reviewCarousel.addEventListener("mouseleave", startAutoPlay);
     reviewCarousel.addEventListener("focusin", stopAutoPlay);

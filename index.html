@@ -218,10 +218,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20260909-oficinas-2">
+  <link rel="stylesheet" href="styles.css?v=20260925-accessibility">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
   <header class="nav">
     <div class="container nav__inner">
       <a href="#inicio" class="logo">
@@ -353,6 +354,7 @@
             </div>
 
             <div class="review-carousel__controls" aria-label="Controles de rese&ntilde;as">
+              <button class="review-carousel__button review-carousel__pause" type="button" data-review-pause aria-pressed="false" aria-label="Pausar o reanudar el avance automático de reseñas">Pausar</button>
               <button class="review-carousel__button" type="button" data-review-prev aria-label="Ver rese&ntilde;a anterior">
                 <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
               </button>
@@ -1112,6 +1114,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20260925-forms-analytics"></script>
+  <script src="script.js?v=20260925-accessibility"></script>
 </body>
 </html>

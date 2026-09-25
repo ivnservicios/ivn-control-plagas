@@ -300,3 +300,7 @@ Flujo recomendado:
 - Mantener Google Business Profile activo con fotos, publicaciones y respuestas a resenas.
 - Agregar mas contenido unico si nuevas comunas empiezan a competir.
 - Crear nuevas paginas solo cuando haya una intencion SEO clara.
+
+## Accesibilidad: actualización 25/9/2026
+
+Botones principales con verde oscuro y texto blanco; foco visible global, margen de anclas y enlace para saltar al contenido en paginas con main. Carrusel con pausa persistente, suspensión con foco/hover/pestaña oculta y respeto de movimiento reducido. Verificadas portada, oficinas y Maipu en 320, 390 y 1280 px, teclado y controles de reseñas.
