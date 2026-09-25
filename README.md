@@ -10,7 +10,7 @@ El sitio esta orientado a SEO local, generacion de contactos por WhatsApp, formu
 - Dominio configurado en `CNAME`.
 - Hosting mediante GitHub Pages.
 - Sitemap enviado en Search Console: `https://ivnservicios.cl/sitemap.xml`.
-- Sitemap actual con 80 URLs SEO publicables.
+- Sitemap actual con 81 URLs SEO publicables.
 - Google Analytics 4 instalado con ID `G-GFX96N4X42`.
 - Formulario principal conectado a Formspree.
 - Google Business Profile existente y administrado por IVN Servicios.
@@ -152,13 +152,18 @@ Estas paginas no se consideran landing SEO principales.
 
 ### GA4
 
-El sitio carga GA4 desde `script.js` usando `G-GFX96N4X42`.
+El sitio carga GA4 desde `script.js` usando `G-GFX96N4X42`, solo en ivnservicios.cl y www.ivnservicios.cl. Las pruebas locales no cargan Analytics.
+
+Los eventos personalizados incluyen `service` y `plan`, con valores controlados. Usan la URL canonica sin parametros y solo el origen del referente; no incluyen nombres, telefono, correo, mensajes ni enlaces de contacto completos. Cada clic de WhatsApp emite un solo evento personalizado.
+
+`generate_lead` indica que Formspree acepto la solicitud: no confirma entrega al correo ni una venta. El 25 de septiembre de 2026 se confirmo el flujo correcto, se marco generate_lead como evento clave y se crearon Servicio (service) y Plan (plan), ambas con alcance de evento. La medicion mejorada estaba desactivada. Quedan pendientes la comprobacion de los nuevos parametros tras publicar y la vinculacion con Search Console.
 
 Eventos medidos:
 
 - `click_whatsapp`
 - `click_email`
-- `click_whatsapp_form_helper`
+- `click_cotizar_limpieza`
+- `click_plan_esencial`, `click_plan_frecuente`, `click_plan_intensivo`
 - `form_validation_error`
 - `generate_lead`
 - `form_submit_error`
@@ -193,7 +198,7 @@ Sitemap activo:
 https://ivnservicios.cl/sitemap.xml
 ```
 
-Al 3 de agosto de 2026, el sitemap local queda preparado con 80 URLs SEO publicables. Las URLs nuevas deben solicitarse o monitorearse en Search Console tras el despliegue.
+Al 25 de septiembre de 2026, el sitemap local queda preparado con 81 URLs SEO publicables. Las URLs nuevas deben solicitarse o monitorearse en Search Console tras el despliegue.
 
 Paginas confirmadas como indexadas durante el trabajo:
 
@@ -267,6 +272,8 @@ Flujo recomendado:
 
 ## Checklist antes de publicar cambios
 
+- Ejecutar `python scripts/sync_faq_schema.py` para comprobar que las FAQ visibles y su JSON-LD coincidan. Después de editar una FAQ, ejecutar `python scripts/sync_faq_schema.py --write` y revisar el diff antes de publicar. El HTML visible es la fuente del marcado.
+
 - Revisar pagina local.
 - Confirmar formulario y CTA de WhatsApp.
 - Confirmar que `sitemap.xml` incluya solo URLs SEO publicables.
@@ -276,7 +283,19 @@ Flujo recomendado:
 
 ## Pendientes recomendados
 
-- Seguir monitoreando indexacion de las 80 URLs SEO publicables en Search Console.
+### Limpieza de oficinas — revisión SEO del 25 de septiembre de 2026
+
+- Catálogo del inicio actualizado y enlazado con el servicio mediante un identificador compartido.
+- Enlaces descriptivos desde el inicio y sanitización hacia `limpieza-oficinas.html`.
+- Open Graph configurado como página web de servicio.
+- Pendiente: incorporar fotografías reales cuando el usuario las entregue. No se añadieron imágenes de stock ni marcadores de posición.
+- Pendiente: confirmar indexación y revisar consultas, impresiones y posición de la nueva URL en Search Console. No se ha confirmado su estado actual de indexación.
+
+### Seguimiento general
+
+- Reseñas: se conservan las citas visibles existentes; queda pendiente cotejarlas con sus originales en Google. Se retiró el marcado Review/AggregateRating del negocio y los contadores y fechas relativas sin actualización automática. El perfil de Google muestra la valoración y cantidad vigentes.
+
+- Seguir monitoreando indexacion de las 81 URLs SEO publicables en Search Console.
 - Solicitar indexacion manual para paginas importantes no indexadas.
 - Mantener Google Business Profile activo con fotos, publicaciones y respuestas a resenas.
 - Agregar mas contenido unico si nuevas comunas empiezan a competir.

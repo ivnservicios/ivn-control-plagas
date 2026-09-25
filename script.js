@@ -27,12 +27,43 @@ document.addEventListener("DOMContentLoaded", () => {
     referrer: document.referrer || "directo"
   });
 
+  const analyticsEnabled = ["ivnservicios.cl", "www.ivnservicios.cl"].includes(window.location.hostname);
+  const serviceForPage = () => {
+    const path = window.location.pathname;
+    if (path.includes("limpieza-oficinas")) return "limpieza_oficinas";
+    if (path.includes("aguas-servidas")) return "aguas_servidas";
+    if (path.includes("sanitizacion")) return "sanitizacion";
+    if (path.includes("desratizacion") || path.includes("control-de-ratones")) return "desratizacion";
+    if (path.includes("desinsectacion") || /control-de-(aranas|chinches|cucarachas|hormigas|pulgas)/.test(path)) return "desinsectacion";
+    if (path.includes("fumigacion")) return "fumigacion";
+    if (path.includes("control-de-plagas")) return "control_plagas";
+    return "general";
+  };
+  const planForForm = () => ({
+    "1 vez por semana": "esencial",
+    "2 veces por semana": "frecuente",
+    "3 veces por semana": "intensivo",
+    "No estoy seguro": "por_definir"
+  })[document.querySelector('select[name="frequency"]')?.value] || "no_aplica";
+  const referrerOrigin = () => {
+    try { return new URL(document.referrer).origin; } catch { return ""; }
+  };
+  // Analytics receives document metadata, never query strings or form text.
+  const analyticsLocation = document.querySelector('link[rel="canonical"]')?.href || window.location.origin + window.location.pathname;
+  const analyticsContext = () => ({
+    page_title: document.title,
+    page_location: analyticsLocation,
+    page_referrer: referrerOrigin(),
+    service: serviceForPage(),
+    plan: planForForm()
+  });
+
   const analyticsId = document.querySelector('meta[name="google-analytics-id"]')?.content?.trim() || "G-GFX96N4X42";
-  if (analyticsId && /^G-[A-Z0-9]+$/i.test(analyticsId)) {
+  if (analyticsEnabled && analyticsId && /^G-[A-Z0-9]+$/i.test(analyticsId)) {
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function gtag(){ window.dataLayer.push(arguments); };
     window.gtag("js", new Date());
-    window.gtag("config", analyticsId);
+    window.gtag("config", analyticsId, analyticsContext());
 
     if (!document.querySelector(`script[src*="googletagmanager.com/gtag/js?id=${analyticsId}"]`)) {
       const analyticsScript = document.createElement("script");
@@ -43,9 +74,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const trackEvent = (eventName, params = {}) => {
-    if (typeof window.gtag === "function") {
+    if (analyticsEnabled && typeof window.gtag === "function") {
       window.gtag("event", eventName, {
-        ...pageContext(),
+        ...analyticsContext(),
         ...params
       });
       return true;
@@ -76,8 +107,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.querySelectorAll("[data-event]").forEach((link) => {
+    // Contact links use only the dedicated listener below.
+    if (link.href.startsWith("https://wa.me/") || link.href.startsWith("mailto:")) return;
     link.addEventListener("click", () => {
-      trackEvent(link.dataset.event, { link_text: link.textContent.trim(), link_url: link.href });
+      trackEvent(link.dataset.event);
     });
   });
 
@@ -106,18 +139,15 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('a[href^="https://wa.me/"]').forEach((link) => {
     link.addEventListener("click", () => {
       trackEvent("click_whatsapp", {
-        link_text: link.textContent.trim(),
-        link_url: link.href
+        contact_channel: "whatsapp",
+        placement: link.classList.contains("wa-float") ? "floating" : link.closest("#contacto") ? "contact" : "page"
       });
     });
   });
 
   document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
     link.addEventListener("click", () => {
-      trackEvent("click_email", {
-        link_text: link.textContent.trim(),
-        link_url: link.href
-      });
+      trackEvent("click_email", { contact_channel: "email" });
     });
   });
 
@@ -243,37 +273,27 @@ document.addEventListener("DOMContentLoaded", () => {
     startAutoPlay();
   }
 
-  const sendWA = document.getElementById("sendWA");
-  if (sendWA) {
-    sendWA.addEventListener("click", () => {
-      const name = document.querySelector('input[name="name"]')?.value?.trim() || "";
-      const phone = document.querySelector('input[name="phone"]')?.value?.trim() || "";
-      const place = document.querySelector('input[name="place"]')?.value?.trim() || "";
-      const msg = document.querySelector('textarea[name="message"]')?.value?.trim() || "";
-
-      const text =
-`Hola, quiero cotizar control de plagas.
-Nombre: ${name || "-"}
-Telefono/WhatsApp: ${phone || "-"}
-Comuna/Direccion: ${place || "-"}
-Problema: ${msg || "-"}
-
-Me pueden indicar disponibilidad y valor?`;
-
-      const url = "https://wa.me/56958829194?text=" + encodeURIComponent(text);
-      trackEvent("click_whatsapp_form_helper", {
-        contact_place: place,
-        contact_problem: msg
-      });
-      window.open(url, "_blank", "noopener");
-    });
-  }
-
   const form = document.querySelector("form.form");
   if (!form) return;
   updateLeadContext(form);
 
   const feedback = document.getElementById("formFeedback");
+  const submitButton = form.querySelector('button[type="submit"]');
+  const submitLabel = submitButton?.innerHTML;
+  let isSubmitting = false;
+
+  const setSubmitting = (pending) => {
+    isSubmitting = pending;
+    form.setAttribute("aria-busy", String(pending));
+    if (submitButton) {
+      submitButton.disabled = pending;
+      if (pending) {
+        submitButton.textContent = "Enviando…";
+      } else {
+        submitButton.innerHTML = submitLabel;
+      }
+    }
+  };
   const requiredFields = Array.from(form.querySelectorAll("input[required], textarea[required]"));
 
   const setFieldState = (field) => {
@@ -318,6 +338,7 @@ Me pueden indicar disponibilidad y valor?`;
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    if (isSubmitting) return;
 
     const invalidFields = requiredFields.filter((field) => !setFieldState(field));
 
@@ -334,6 +355,8 @@ Me pueden indicar disponibilidad y valor?`;
     updateLeadContext(form);
 
     const formData = new FormData(form);
+    setSubmitting(true);
+    let accepted = false;
 
     try {
       const response = await fetch(form.action, {
@@ -345,6 +368,9 @@ Me pueden indicar disponibilidad y valor?`;
       });
 
       if (response.ok) {
+        // Keep the form locked until navigation, including the analytics delay.
+        accepted = true;
+        if (submitButton) submitButton.textContent = "Solicitud enviada";
         const redirectToThanks = () => {
           window.location.href = "/gracias.html";
         };
@@ -362,14 +388,18 @@ Me pueden indicar disponibilidad y valor?`;
           method: "formspree",
           status: response.status
         });
-        alert("No se pudo enviar el formulario. Intenta nuevamente.");
+        showFeedback(response.status === 429
+          ? "El servicio de cotizaciones no está disponible temporalmente. Espera unos minutos o escríbenos por WhatsApp. Tus datos siguen en el formulario."
+          : "No se pudo enviar la solicitud. Tus datos siguen en el formulario: intenta nuevamente o escríbenos por WhatsApp.");
       }
     } catch (error) {
       trackEvent("form_submit_error", {
         method: "formspree",
         status: "network"
       });
-      alert("Error de conexion. Intenta nuevamente.");
+      showFeedback("No pudimos confirmar el envío por un problema de conexión. Tus datos siguen en el formulario. Revisa tu conexión o escríbenos por WhatsApp antes de repetir la solicitud.");
+    } finally {
+      if (!accepted) setSubmitting(false);
     }
   });
 });

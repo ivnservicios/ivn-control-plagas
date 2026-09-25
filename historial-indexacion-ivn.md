@@ -1,26 +1,32 @@
 # Historial de indexacion IVN Servicios
 
 Fecha de generacion: 2026-08-03
-Ultima actualizacion: 2026-08-13
+Ultima actualizacion documental: 2026-09-25
+Ultima comprobacion de estados registrada: 2026-08-13. Los estados siguientes son historicos y requieren nueva verificacion en Search Console.
 
 Uso sugerido: revisar cada URL en Google Search Console con "Inspeccion de URL" y marcar el estado.
 
 Leyenda:
-- [x] Indexada en Google.
+- [x] Indexada en Google en la ultima comprobacion registrada.
 - [-] Solicitud enviada; pendiente de que Google la procese.
 - [ ] Pendiente para revisar o solicitar otro dia.
 
-## Resumen
+## Comprobacion del 25 de septiembre de 2026
 
-- Total de URLs SEO en sitemap: 80
+Search Console informa 81 paginas indexadas (informe actualizado el 20/9). Sitemap correcto, con 81 URLs descubiertas y ultima lectura el 22/9. La inspeccion individual confirma limpieza-oficinas.html indexada. Las exclusiones son index.html por canonical y gracias.html por noindex; ambas esperadas. El detalle historico siguiente se conserva, no representa una nueva inspeccion individual de cada URL.
+
+## Resumen historico
+
+- Total de URLs SEO en sitemap: 81
 - Principal: 1
 - Servicios base: 4
+- Limpieza de oficinas: 1
 - Paginas por plaga: 6
 - Comunas control de plagas: 34
 - Aguas servidas: 35
-- Indexadas confirmadas: 58
+- Indexadas confirmadas historicamente: 58
 - Solicitudes enviadas y pendientes de Google: 11
-- Pendientes para revisar o solicitar otro dia: 11
+- Pendientes para revisar o solicitar otro dia: 12
 
 ## Principal
 
@@ -32,6 +38,10 @@ Leyenda:
 - [x] https://ivnservicios.cl/desinsectacion-santiago.html
 - [x] https://ivnservicios.cl/sanitizacion-santiago.html
 - [x] https://ivnservicios.cl/fumigacion-santiago.html
+
+## Limpieza de oficinas
+
+- [x] https://ivnservicios.cl/limpieza-oficinas.html (inspeccion individual confirmada el 25/9/2026)
 
 ## Paginas por plaga
 

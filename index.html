@@ -110,8 +110,15 @@
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Servicios de control de plagas",
+      "name": "Servicios de control de plagas, sanitización y limpieza",
       "itemListElement": [
+        {
+          "@type": "Service",
+          "@id": "https://ivnservicios.cl/limpieza-oficinas.html#servicio",
+          "name": "Limpieza de Oficinas",
+          "url": "https://ivnservicios.cl/limpieza-oficinas.html",
+          "description": "Limpieza programada para oficinas en Santiago y Región Metropolitana con planes de una, dos o tres visitas semanales."
+        },
         {
           "@type": "Offer",
           "itemOffered": {
@@ -150,58 +157,7 @@
       "@type": "CommunicateAction",
       "name": "Solicitar cotizacion por WhatsApp",
       "target": "https://wa.me/56958829194"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "20",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Daniel"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "reviewBody": "Excelente servicio de control de plagas. Muy buena disposicion, explicacion clara del proceso y atencion responsable. Se nota el compromiso con el trabajo. Gracias por la fumigacion del quincho."
-      },
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "David Toledo"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "reviewBody": "Tuve un problema de plagas, los llame de emergencia y me atendieron super bien. Muy buena atencion y trato cercano. Se nota la seriedad y la preocupacion por hacer bien el trabajo. Totalmente recomendable."
-      },
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Karina Castillo Espinoza"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "reviewBody": "Excelente servicio, respuesta rapida y explicacion clara de todo el proceso. Me dio mucha confianza desde el primer contacto. Buscaba control de plagas cerca de mi y quede muy conforme. Atencion profesional y muy buena disposicion para resolver dudas."
-      }
-    ]
+    }
   }
   </script>
   <script type="application/ld+json">
@@ -218,44 +174,44 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Que tipos de plagas atienden?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "IVN Servicios realiza control de ratones, ratas, cucarachas, hormigas, chinches, aranas, pulgas, moscas y otras plagas frecuentes en hogares y empresas."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Atienden hogares y empresas?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Si. Se coordinan servicios para casas, departamentos, oficinas, locales comerciales y bodegas, segun el tipo de plaga y el nivel de infestacion."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Como funciona el servicio de control de plagas?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "El proceso considera inspeccion, tratamiento y seguimiento, con recomendaciones preventivas para reducir el riesgo de reaparicion."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "En que zonas trabajan?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "IVN Servicios atiende Santiago y distintas comunas de la Region Metropolitana, ademas de zonas cercanas sujetas a coordinacion."
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué tipos de plagas atienden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Realizamos control de ratones, ratas, cucarachas, hormigas, chinches, arañas, pulgas, moscas y otras plagas frecuentes en viviendas, oficinas, locales y bodegas."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Atienden hogares y empresas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Coordinamos servicios para casas, departamentos, oficinas, comercios y bodegas, con tratamientos ajustados al tipo de plaga y al entorno intervenido."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo funciona el servicio de control de plagas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El proceso considera inspección, tratamiento y seguimiento. Además, se entregan recomendaciones preventivas para disminuir el riesgo de reaparición."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué zonas trabajan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IVN Servicios atiende Santiago y distintas comunas de la Región Metropolitana, además de sectores cercanos sujetos a coordinación previa."
+      }
+    }
+  ]
+}
   </script>
 
   <link rel="icon" href="favicon/favicon.ico">
@@ -310,7 +266,7 @@
         <div class="card hero-contact">
           <div class="hero-contact__topline">
             <p class="hero-contact__eyebrow">Atenci&oacute;n directa</p>
-            <span class="hero-contact__status"><span aria-hidden="true"></span> Disponible hoy</span>
+            <span class="hero-contact__status"><span aria-hidden="true"></span> Consulta disponibilidad</span>
           </div>
           <h2>Contacto directo</h2>
           <p class="hero-contact__lead">Indica la comuna y el problema detectado. Te orientamos para coordinar una cotizaci&oacute;n gratuita.</p>
@@ -366,26 +322,20 @@
     <section id="resenas" class="section alt">
       <div class="container">
         <h2>La confianza tambi&eacute;n se construye con resultados</h2>
-        <p class="sub">Hoy contamos con <strong>20 opiniones en Google</strong> y una calificaci&oacute;n de <strong>5,0 estrellas</strong>, reflejando la experiencia de clientes que ya confiaron en IVN Servicios.</p>
+        <p class="sub">Conoce las experiencias de nuestros clientes y consulta la valoración y el total de opiniones actualizados en nuestro perfil de Google.</p>
 
         <div class="grid3">
           <article class="box review-stat">
-            <span class="review-stat__label">Calificaci&oacute;n</span>
-            <strong class="review-stat__value">5,0</strong>
-            <div class="review-stars" aria-label="Calificacion de 5 estrellas">
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-              <i class="fa-solid fa-star" aria-hidden="true"></i>
-            </div>
-            <p class="muted">Valoraci&oacute;n actual en Google Business Profile.</p>
+            <span class="review-stat__label">Opiniones de clientes</span>
+            <strong class="review-stat__value review-stat__value--small">En Google</strong>
+            <p class="muted">Consulta la valoración y las opiniones actualizadas en nuestro perfil.</p>
+            <a class="service-link" href="https://share.google/Uw4kQIBwLVKezKvHc" target="_blank" rel="noopener noreferrer">Ver opiniones en Google</a>
           </article>
 
           <article class="box review-stat">
-            <span class="review-stat__label">Opiniones</span>
-            <strong class="review-stat__value">20</strong>
-            <p class="muted">Rese&ntilde;as reales de clientes que ya contrataron nuestros servicios.</p>
+            <span class="review-stat__label">Experiencias compartidas</span>
+            <strong class="review-stat__value review-stat__value--small">Nuestros clientes</strong>
+            <p class="muted">Lee una selección de opiniones sobre la atención de IVN Servicios.</p>
           </article>
 
           <article class="box review-stat">
@@ -420,7 +370,7 @@
                     <span class="review-card__avatar">D</span>
                     <div class="review-card__identity">
                       <strong class="review-card__author">Daniel</strong>
-                      <span class="review-card__meta">1 opini&oacute;n · Hace 3 meses</span>
+                      <span class="review-card__meta">Opinión publicada en Google</span>
                     </div>
                   </div>
                   <span class="review-card__source">Google</span>
@@ -441,7 +391,7 @@
                     <span class="review-card__avatar">D</span>
                     <div class="review-card__identity">
                       <strong class="review-card__author">David Toledo</strong>
-                      <span class="review-card__meta">2 opiniones · Hace 3 meses</span>
+                      <span class="review-card__meta">Opinión publicada en Google</span>
                     </div>
                   </div>
                   <span class="review-card__source">Google</span>
@@ -462,7 +412,7 @@
                     <span class="review-card__avatar">J</span>
                     <div class="review-card__identity">
                       <strong class="review-card__author">Juan Mart&iacute;nez</strong>
-                      <span class="review-card__meta">2 opiniones · Hace 3 meses</span>
+                      <span class="review-card__meta">Opinión publicada en Google</span>
                     </div>
                   </div>
                   <span class="review-card__source">Google</span>
@@ -483,7 +433,7 @@
                     <span class="review-card__avatar">K</span>
                     <div class="review-card__identity">
                       <strong class="review-card__author">Karina Castillo</strong>
-                      <span class="review-card__meta">2 opiniones · Hace 3 meses</span>
+                      <span class="review-card__meta">Opinión publicada en Google</span>
                     </div>
                   </div>
                   <span class="review-card__source">Google</span>
@@ -504,7 +454,7 @@
                     <span class="review-card__avatar">R</span>
                     <div class="review-card__identity">
                       <strong class="review-card__author">Rafael D</strong>
-                      <span class="review-card__meta">1 opini&oacute;n · Hace 3 meses</span>
+                      <span class="review-card__meta">Opinión publicada en Google</span>
                     </div>
                   </div>
                   <span class="review-card__source">Google</span>
@@ -525,7 +475,7 @@
                     <span class="review-card__avatar">N</span>
                     <div class="review-card__identity">
                       <strong class="review-card__author">&ldquo;Natural&rdquo; Natural</strong>
-                      <span class="review-card__meta">4 opiniones · Hace 3 meses</span>
+                      <span class="review-card__meta">Opinión publicada en Google</span>
                     </div>
                   </div>
                   <span class="review-card__source">Google</span>
@@ -546,7 +496,7 @@
                     <span class="review-card__avatar">I</span>
                     <div class="review-card__identity">
                       <strong class="review-card__author">Ignacio Sandoval Ca&ntilde;ete</strong>
-                      <span class="review-card__meta">3 opiniones · 2 fotos · Hace 3 meses</span>
+                      <span class="review-card__meta">Opinión publicada en Google</span>
                     </div>
                   </div>
                   <span class="review-card__source">Google</span>
@@ -567,7 +517,7 @@
                     <span class="review-card__avatar">F</span>
                     <div class="review-card__identity">
                       <strong class="review-card__author">Fernanda Sobarzo</strong>
-                      <span class="review-card__meta">1 opini&oacute;n · Hace 3 meses</span>
+                      <span class="review-card__meta">Opinión publicada en Google</span>
                     </div>
                   </div>
                   <span class="review-card__source">Google</span>
@@ -588,7 +538,7 @@
                     <span class="review-card__avatar">J</span>
                     <div class="review-card__identity">
                       <strong class="review-card__author">Juan andres urriola rojas</strong>
-                      <span class="review-card__meta">1 opini&oacute;n · Hace 3 meses</span>
+                      <span class="review-card__meta">Opinión publicada en Google</span>
                     </div>
                   </div>
                   <span class="review-card__source">Google</span>
@@ -629,7 +579,7 @@
             <img class="servicio-icon" src="assets/img/oficina.svg" alt="Puesto de trabajo de oficina" width="128" height="128" loading="lazy" decoding="async">
             <h3>Limpieza de Oficinas</h3>
             <p>Limpieza programada para oficinas y empresas con planes de una, dos o tres visitas semanales, adaptados a las necesidades de cada instalación.</p>
-            <div class="service-card__actions"><a class="service-link" href="limpieza-oficinas.html">Ver servicio</a></div>
+            <div class="service-card__actions"><a class="service-link" href="limpieza-oficinas.html">Ver limpieza de oficinas</a></div>
           </article>
 
           <article class="box servicio">
@@ -1162,6 +1112,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20260909-form-origin"></script>
+  <script src="script.js?v=20260925-forms-analytics"></script>
 </body>
 </html>
