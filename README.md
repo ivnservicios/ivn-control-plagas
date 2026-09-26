@@ -304,3 +304,9 @@ Flujo recomendado:
 ## Accesibilidad: actualización 25/9/2026
 
 Botones principales con verde oscuro y texto blanco; foco visible global, margen de anclas y enlace para saltar al contenido en paginas con main. Carrusel con pausa persistente, suspensión con foco/hover/pestaña oculta y respeto de movimiento reducido. Verificadas portada, oficinas y Maipu en 320, 390 y 1280 px, teclado y controles de reseñas.
+
+## Rendimiento: dimensiones de imagen (25/9/2026)
+
+Se agregaron dimensiones intrinsecas a 86 imagenes en 80 paginas. Todos los img del sitio declaran width y height. Se conservan recursos, textos alternativos y carga diferida.
+
+Comprobacion local en Edge: portada, Maipu y oficinas, a 390 y 1280 px, con demora simulada de 350 ms en imagenes. Sin desbordamiento; las imagenes ya cargadas mantienen su tamaño y las diferidas reservan espacio. CLS de carga inicial: 0 antes y despues en los seis casos. Esto previene un riesgo de desplazamiento, pero no demuestra una mejora de Core Web Vitals reales ni sustituye PageSpeed/CrUX. Las fotos nuevas siguen pendientes.
