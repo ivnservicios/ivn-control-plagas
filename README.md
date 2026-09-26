@@ -156,7 +156,7 @@ El sitio carga GA4 desde `script.js` usando `G-GFX96N4X42`, solo en ivnservicios
 
 Los eventos personalizados incluyen `service` y `plan`, con valores controlados. Usan la URL canonica sin parametros y solo el origen del referente; no incluyen nombres, telefono, correo, mensajes ni enlaces de contacto completos. Cada clic de WhatsApp emite un solo evento personalizado.
 
-`generate_lead` indica que Formspree acepto la solicitud: no confirma entrega al correo ni una venta. El 25 de septiembre de 2026 se confirmo el flujo correcto, se marco generate_lead como evento clave y se crearon Servicio (service) y Plan (plan), ambas con alcance de evento. La medicion mejorada estaba desactivada. Quedan pendientes la comprobacion de los nuevos parametros tras publicar y la vinculacion con Search Console.
+`generate_lead` indica que Formspree acepto la solicitud: no confirma entrega al correo ni una venta. El 25 de septiembre de 2026 se confirmo el flujo correcto, se marco generate_lead como evento clave y se crearon Servicio (service) y Plan (plan), ambas con alcance de evento. Tras publicar se comprobo en GA4 Tiempo real el evento `click_plan_frecuente`, con `plan=frecuente` y `service=limpieza_oficinas`. Fue un clic de prueba, sin enviar el formulario. En esa sesion tambien aparecieron eventos automaticos `scroll` y `form_start`; el estado actual de medicion mejorada debe revisarse antes de asumir que sigue desactivada. Queda pendiente la vinculacion con Search Console: GA4 no muestra vinculaciones y las cuentas abiertas en Search Console no muestran la propiedad del sitio.
 
 Eventos medidos:
 
@@ -293,7 +293,8 @@ Flujo recomendado:
 
 ### Seguimiento general
 
-- Reseñas: se conservan las citas visibles existentes; queda pendiente cotejarlas con sus originales en Google. Se retiró el marcado Review/AggregateRating del negocio y los contadores y fechas relativas sin actualización automática. El perfil de Google muestra la valoración y cantidad vigentes.
+- Reseñas: las nueve citas de portada se cotejaron con sus originales en Google el 25/9/2026. Se ajustaron nombres y transcripcion, y se identificaron los extractos de Daniel, David Toledo y Karina Castillo Espinoza. Fuente: https://share.google/Uw4kQIBwLVKezKvHc. Se mantiene retirado el marcado Review/AggregateRating del negocio y los contadores y fechas relativas sin actualizacion automatica. El perfil de Google muestra la valoracion y cantidad vigentes.
+- Perfil de Google: se observo que todavia enlaza al Instagram anterior `fumigaciones.ivn`; queda pendiente actualizarlo al perfil vigente `ivnservicios.cl`. Tambien hay opiniones nuevas sin respuesta; no se publicaron respuestas durante esta comprobacion.
 
 - Seguir monitoreando indexacion de las 81 URLs SEO publicables en Search Console.
 - Solicitar indexacion manual para paginas importantes no indexadas.
