@@ -6,9 +6,9 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com data:; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com; form-action 'self' https://formspree.io; upgrade-insecure-requests">
   <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Control de Plagas en Santiago y RM | Desratizaci&oacute;n, Sanitizaci&oacute;n y Desinsectaci&oacute;n | IVN Servicios</title>
+  <title>Control de Plagas en Santiago y RM | IVN Servicios</title>
 
-  <meta name="description" content="IVN Servicios ofrece control de plagas en Santiago y la Regi&oacute;n Metropolitana para hogares y empresas: desratizaci&oacute;n, desinsectaci&oacute;n, sanitizaci&oacute;n y seguimiento preventivo con cotizaci&oacute;n gratuita.">
+  <meta name="description" content="Control de plagas en Santiago y RM para hogares y empresas. Desratizaci&oacute;n, desinsectaci&oacute;n y sanitizaci&oacute;n. Cu&eacute;ntanos tu caso y solicita una cotizaci&oacute;n gratuita.">
   <meta name="author" content="IVN Servicios">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -22,8 +22,6 @@
 
   <meta name="geo.region" content="CL-RM">
   <meta name="geo.placename" content="Santiago">
-  <meta name="geo.position" content="-33.4489;-70.6693">
-  <meta name="ICBM" content="-33.4489, -70.6693">
 
   <meta property="og:locale" content="es_CL">
   <meta property="og:type" content="website">
@@ -67,11 +65,6 @@
       "addressRegion": "Region Metropolitana",
       "addressCountry": "CL"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -33.4489,
-      "longitude": -70.6693
-    },
     "areaServed": [
       {
         "@type": "City",
@@ -101,11 +94,16 @@
           "Wednesday",
           "Thursday",
           "Friday",
-          "Saturday",
-          "Sunday"
+          "Saturday"
         ],
-        "opens": "08:00",
-        "closes": "21:00"
+        "opens": "07:00",
+        "closes": "23:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "10:00",
+        "closes": "23:30"
       }
     ],
     "hasOfferCatalog": {
@@ -311,6 +309,7 @@
           </div>
 
           <p class="hero-contact__trust"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Cotizaci&oacute;n gratuita y sin compromiso.</p>
+          <p class="small muted">Horario de atenci&oacute;n: lunes a s&aacute;bado, 07:00&ndash;23:30. Domingo, 10:00&ndash;23:30. Visitas sujetas a coordinaci&oacute;n.</p>
 
           <a class="btn hero-contact__cta" href="https://wa.me/56958829194" target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
@@ -1057,14 +1056,14 @@
             <label>Nombre
               <span class="quote-form__field">
                 <i class="fa-solid fa-user" aria-hidden="true"></i>
-                <input type="text" name="name" placeholder="Tu nombre" required>
+                <input type="text" name="name" placeholder="Tu nombre" required autocomplete="name">
               </span>
             </label>
 
             <label>Tel&eacute;fono / WhatsApp
               <span class="quote-form__field">
                 <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-                <input type="text" name="phone" placeholder="+56 9..." required>
+                <input type="tel" name="phone" autocomplete="tel" placeholder="+56 9..." required>
               </span>
             </label>
 

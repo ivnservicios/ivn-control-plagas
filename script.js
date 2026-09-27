@@ -3,16 +3,31 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector(".nav__menu, #menu");
 
   if (toggle && menu) {
+    const closeMenu = (restoreFocus = false) => {
+      menu.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Abrir menu");
+      if (restoreFocus) toggle.focus();
+    };
     toggle.addEventListener("click", () => {
       const isOpen = menu.classList.toggle("open");
       toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "Cerrar menu" : "Abrir menu");
     });
 
     menu.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
-        menu.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
+        closeMenu();
       });
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && menu.classList.contains("open")) closeMenu(true);
+    });
+    document.addEventListener("click", (event) => {
+      if (!menu.contains(event.target) && !toggle.contains(event.target)) closeMenu();
+    });
+    document.addEventListener("focusin", (event) => {
+      if (!menu.contains(event.target) && !toggle.contains(event.target)) closeMenu();
     });
   }
 
@@ -179,6 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const updateReviewDots = () => {
       dots.forEach((dot, index) => {
         dot.classList.toggle("is-active", index === currentIndex);
+        dot.setAttribute("aria-current", String(index === currentIndex));
       });
     };
 

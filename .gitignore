@@ -1,2 +1,3 @@
 server.err.txt
 server.out.txt
+__pycache__/

@@ -1,8 +1,8 @@
 # Historial de indexacion IVN Servicios
 
 Fecha de generacion: 2026-08-03
-Ultima actualizacion documental: 2026-09-25
-Ultima comprobacion de estados registrada: 2026-08-13. Los estados siguientes son historicos y requieren nueva verificacion en Search Console.
+Ultima actualizacion documental: 2026-09-27
+Ultima comprobacion del listado: 2026-09-27, mediante exportacion de Paginas indexadas de Search Console (informe actualizado el 20/9/2026). No corresponde a 81 inspecciones individuales en tiempo real.
 
 Uso sugerido: revisar cada URL en Google Search Console con "Inspeccion de URL" y marcar el estado.
 
@@ -15,7 +15,13 @@ Leyenda:
 
 Search Console informa 81 paginas indexadas (informe actualizado el 20/9). Sitemap correcto, con 81 URLs descubiertas y ultima lectura el 22/9. La inspeccion individual confirma limpieza-oficinas.html indexada. Las exclusiones son index.html por canonical y gracias.html por noindex; ambas esperadas. El detalle historico siguiente se conserva, no representa una nueva inspeccion individual de cada URL.
 
-## Resumen historico
+## Comprobacion del 27 de septiembre de 2026
+
+La exportacion de Paginas indexadas contiene 81 URLs unicas y coincide exactamente con las 81 URLs del sitemap local, sin faltantes ni adicionales. Se actualizaron 22 casillas: 11 solicitudes pendientes y 11 paginas sin revisar. El resumen anterior tenia un desfase de una URL respecto de las casillas (59 indexadas, 11 solicitadas y 11 sin revisar).
+
+No se solicitaron nuevas indexaciones. Los estados reflejan el ultimo informe disponible, no garantizan permanencia en el indice ni posicionamiento. Fuente descargada: https___ivnservicios.cl_-Coverage-Valid-2026-09-27.zip, Tabla.csv.
+
+## Resumen actualizado
 
 - Total de URLs SEO en sitemap: 81
 - Principal: 1
@@ -24,9 +30,9 @@ Search Console informa 81 paginas indexadas (informe actualizado el 20/9). Sitem
 - Paginas por plaga: 6
 - Comunas control de plagas: 34
 - Aguas servidas: 35
-- Indexadas confirmadas historicamente: 58
-- Solicitudes enviadas y pendientes de Google: 11
-- Pendientes para revisar o solicitar otro dia: 12
+- Indexadas confirmadas en el listado exportado: 81
+- Solicitudes enviadas y pendientes de Google: 0
+- Pendientes para revisar o solicitar otro dia: 0
 
 ## Principal
 
@@ -104,28 +110,28 @@ Search Console informa 81 paginas indexadas (informe actualizado el 20/9). Sitem
 - [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-recoleta.html
 - [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-independencia.html
 - [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-quilicura.html
-- [-] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-vitacura.html
-- [-] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-estacion-central.html
-- [-] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-pudahuel.html
-- [-] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-huechuraba.html
-- [-] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-penalolen.html
-- [-] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-la-reina.html
-- [-] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-lo-barnechea.html
-- [-] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-renca.html
-- [-] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-san-joaquin.html
-- [-] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-conchali.html
-- [-] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-la-cisterna.html
-- [ ] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-san-bernardo.html
-- [ ] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-el-bosque.html
-- [ ] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-la-pintana.html
-- [ ] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-cerrillos.html
-- [ ] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-quinta-normal.html
-- [ ] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-cerro-navia.html
-- [ ] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-lo-prado.html
-- [ ] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-pedro-aguirre-cerda.html
-- [ ] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-la-granja.html
-- [ ] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-san-ramon.html
-- [ ] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-lo-espejo.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-vitacura.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-estacion-central.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-pudahuel.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-huechuraba.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-penalolen.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-la-reina.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-lo-barnechea.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-renca.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-san-joaquin.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-conchali.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-la-cisterna.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-san-bernardo.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-el-bosque.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-la-pintana.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-cerrillos.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-quinta-normal.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-cerro-navia.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-lo-prado.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-pedro-aguirre-cerda.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-la-granja.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-san-ramon.html
+- [x] https://ivnservicios.cl/limpieza-sanitizacion-aguas-servidas-lo-espejo.html
 
 ## Prioridad recomendada para revisar primero
 

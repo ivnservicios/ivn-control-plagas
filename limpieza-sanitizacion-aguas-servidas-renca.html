@@ -197,8 +197,8 @@
         <form class="form quote-form" id="contactForm" action="https://formspree.io/f/xeeaqjwk" method="POST" novalidate>
           <div class="quote-form__head"><p class="quote-form__eyebrow">Cotizaci&oacute;n gratuita</p><h3>Cu&eacute;ntanos tu caso</h3><p>Completa los datos y te contactaremos para orientar el servicio seg&uacute;n comuna, tipo de propiedad y nivel de afectaci&oacute;n.</p></div>
           <div class="quote-form__grid">
-            <label>Nombre<span class="quote-form__field"><i class="fa-solid fa-user" aria-hidden="true"></i><input type="text" name="name" placeholder="Tu nombre" required></span></label>
-            <label>Tel&eacute;fono / WhatsApp<span class="quote-form__field"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><input type="text" name="phone" placeholder="+56 9..." required></span></label>
+            <label>Nombre<span class="quote-form__field"><i class="fa-solid fa-user" aria-hidden="true"></i><input type="text" name="name" placeholder="Tu nombre" required autocomplete="name"></span></label>
+            <label>Tel&eacute;fono / WhatsApp<span class="quote-form__field"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><input type="tel" name="phone" autocomplete="tel" placeholder="+56 9..." required></span></label>
             <label>Sector / Direcci&oacute;n referencial<span class="quote-form__field"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><input type="text" name="place" placeholder="Ej: Renca, edificio, comunidad..." required></span></label>
             <label class="quote-form__full">Problema / &Aacute;reas afectadas<span class="quote-form__field quote-form__field--textarea"><i class="fa-solid fa-droplet" aria-hidden="true"></i><textarea name="message" rows="4" placeholder="Ej: rebalse en ba&ntilde;o, filtraci&oacute;n desde vertical, bodega afectada..." required></textarea></span></label>
           </div>

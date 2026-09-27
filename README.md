@@ -276,6 +276,8 @@ Flujo recomendado:
 
 ## Checklist antes de publicar cambios
 
+- Ejecutar `python scripts/audit_site.py` y `node --test tests/*.test.cjs`: estructura SEO, enlaces y regresiones de navegacion/analitica.
+
 - Ejecutar `python scripts/sync_faq_schema.py` para comprobar que las FAQ visibles y su JSON-LD coincidan. Después de editar una FAQ, ejecutar `python scripts/sync_faq_schema.py --write` y revisar el diff antes de publicar. El HTML visible es la fuente del marcado.
 
 - Revisar pagina local.
@@ -307,6 +309,7 @@ Flujo recomendado:
 - El 27/9/2026 se revisaron Inbox y Spam de Formspree y se compararon sus totales con GA4. El detalle permanece fuera del repositorio publico. Sin un identificador compartido no es posible conciliar retrospectivamente cada solicitud con cada evento. No se movieron ni borraron mensajes, ni se contaron eventos como ventas. Evaluar los snippets tras un periodo comparable posterior al despliegue; la medicion anterior termina el 24/9 y no mide estos cambios.
 
 - Seguir monitoreando indexacion de las 81 URLs SEO publicables en Search Console.
+- Revision 27/9: las 81 URLs exportadas como indexadas coinciden exactamente con el sitemap; historial actualizado. Analisis y cambios de horario, snippets de portada, formularios y navegacion en `auditoria-seo-2026-09-27.md`. Fotos excluidas de este lote.
 - Solicitar indexacion manual para paginas importantes no indexadas.
 - Mantener Google Business Profile activo con fotos, publicaciones y respuestas a resenas.
 - Agregar mas contenido unico si nuevas comunas empiezan a competir.
