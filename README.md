@@ -304,7 +304,7 @@ Flujo recomendado:
 - Publicacion de esta prueba: commit `ca22870`, enviado a `main` el 27/9/2026. Las cinco URLs respondieron HTTP 200 y sus titulos y descripciones publicados coinciden con los archivos locales. Las fotos reales de oficinas siguen aplazadas por solicitud del usuario.
 - Revision adicional del 27/9/2026: Santiago Centro y Providencia muestran principalmente consultas generales; no hay evidencia suficiente para afirmar canibalizacion ni redirigirlas. Se acorto el titulo y se concreto la descripcion de Santiago Centro, conservando URL y contenido. Providencia mantiene la prueba ya publicada para no acumular cambios sin datos nuevos.
 - `control-de-plagas-poc.html` devuelve HTTP 404 y no figura en los archivos ni historial Git revisado. No se crea una redireccion a la portada ni se agrega al sitemap.
-- La conciliacion de eventos con solicitudes recibidas requiere iniciar sesion en Formspree. No se borraron datos historicos ni se contaron eventos como ventas. Evaluar los snippets tras un periodo comparable posterior al despliegue; la medicion anterior termina el 24/9 y no mide estos cambios.
+- El 27/9/2026 se revisaron Inbox y Spam de Formspree y se compararon sus totales con GA4. El detalle permanece fuera del repositorio publico. Sin un identificador compartido no es posible conciliar retrospectivamente cada solicitud con cada evento. No se movieron ni borraron mensajes, ni se contaron eventos como ventas. Evaluar los snippets tras un periodo comparable posterior al despliegue; la medicion anterior termina el 24/9 y no mide estos cambios.
 
 - Seguir monitoreando indexacion de las 81 URLs SEO publicables en Search Console.
 - Solicitar indexacion manual para paginas importantes no indexadas.
