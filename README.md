@@ -296,9 +296,10 @@ Flujo recomendado:
 ### Seguimiento general
 
 - Reseñas: las nueve citas de portada se cotejaron con sus originales en Google el 25/9/2026. Se ajustaron nombres y transcripcion, y se identificaron los extractos de Daniel, David Toledo y Karina Castillo Espinoza. Fuente: https://share.google/Uw4kQIBwLVKezKvHc. Se mantiene retirado el marcado Review/AggregateRating del negocio y los contadores y fechas relativas sin actualizacion automatica. El perfil de Google muestra la valoracion y cantidad vigentes.
-- Perfil de Google: el 27/9/2026 se envio el cambio de Instagram de `fumigaciones.ivn` a `ivnservicios.cl`; Google lo muestra pendiente de revision. Tambien hay opiniones nuevas sin respuesta; no se publicaron respuestas durante esta comprobacion.
+- Perfil de Google: el 27/9/2026 se confirmo aprobado el Instagram `ivnservicios.cl`. Se reenviaron El Bosque, La Granja, La Pintana, La Cisterna y Lo Espejo; se corrigio la seleccion de Lo Espejo para usar la comuna y no el sector de San Bernardo. Google muestra la cobertura pendiente de revision, sin el error previo. No se publicaron respuestas a opiniones durante esta comprobacion.
 - Search Console: el 27/9/2026 se confirmaron datos en el informe Consultas dentro de GA4, ademas de la vinculacion guardada. Los periodos y agregaciones de ambos productos deben compararse con cuidado.
 - Primera prueba de snippets: titulos mas breves y descripciones especificas para Puente Alto, Maipu, Providencia, La Florida y Quilicura. No cambia URLs, canonical, formularios ni diseno. Comparar rendimiento tras publicar y permitir un nuevo rastreo; Google puede usar otros textos en sus resultados. Las metricas de partida se conservan en un informe interno fuera del sitio.
+- Publicacion de esta prueba: commit `ca22870`, enviado a `main` el 27/9/2026. Las cinco URLs respondieron HTTP 200 y sus titulos y descripciones publicados coinciden con los archivos locales. Las fotos reales de oficinas siguen aplazadas por solicitud del usuario.
 
 - Seguir monitoreando indexacion de las 81 URLs SEO publicables en Search Console.
 - Solicitar indexacion manual para paginas importantes no indexadas.
