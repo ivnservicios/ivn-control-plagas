@@ -27,7 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
     referrer: document.referrer || "directo"
   });
 
-  const analyticsEnabled = ["ivnservicios.cl", "www.ivnservicios.cl"].includes(window.location.hostname);
+  // Persist an explicit opt-out on this browser so production QA stays out of GA4.
+  const analyticsPreference = new URLSearchParams(window.location.search).get("ivn_analytics");
+  let analyticsExcluded = analyticsPreference === "off";
+  try {
+    if (analyticsPreference === "off") window.localStorage.setItem("ivn_analytics_disabled", "1");
+    if (analyticsPreference === "on") window.localStorage.removeItem("ivn_analytics_disabled");
+    analyticsExcluded = analyticsExcluded || window.localStorage.getItem("ivn_analytics_disabled") === "1";
+  } catch {
+    // The URL opt-out still works when storage is unavailable.
+  }
+  const analyticsEnabled = !analyticsExcluded && ["ivnservicios.cl", "www.ivnservicios.cl"].includes(window.location.hostname);
   const serviceForPage = () => {
     const path = window.location.pathname;
     if (path.includes("limpieza-oficinas")) return "limpieza_oficinas";

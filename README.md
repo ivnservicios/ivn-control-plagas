@@ -154,6 +154,8 @@ Estas paginas no se consideran landing SEO principales.
 
 El sitio carga GA4 desde `script.js` usando `G-GFX96N4X42`, solo en ivnservicios.cl y www.ivnservicios.cl. Las pruebas locales no cargan Analytics.
 
+Para pruebas en produccion, abrir `https://ivnservicios.cl/?ivn_analytics=off` antes de navegar. Excluye GA4 en ese navegador y origen mediante almacenamiento local, incluidos eventos automaticos de la etiqueta. Para volver a medir, abrir `?ivn_analytics=on`. No cambia el envio real a Formspree: no enviar formularios de prueba sin autorizacion. No elimina ni identifica retrospectivamente eventos antiguos. Pruebas: `node --test tests/analytics-exclusion.test.cjs`.
+
 Los eventos personalizados incluyen `service` y `plan`, con valores controlados. Usan la URL canonica sin parametros y solo el origen del referente; no incluyen nombres, telefono, correo, mensajes ni enlaces de contacto completos. Cada clic de WhatsApp emite un solo evento personalizado.
 
 `generate_lead` indica que Formspree acepto la solicitud: no confirma entrega al correo ni una venta. El 25 de septiembre de 2026 se confirmo el flujo correcto, se marco generate_lead como evento clave y se crearon Servicio (service) y Plan (plan), ambas con alcance de evento. Tras publicar se comprobo en GA4 Tiempo real el evento `click_plan_frecuente`, con `plan=frecuente` y `service=limpieza_oficinas`. Fue un clic de prueba, sin enviar el formulario. En esa sesion tambien aparecieron eventos automaticos `scroll` y `form_start`; el estado actual de medicion mejorada debe revisarse antes de asumir que sigue desactivada.
@@ -296,10 +298,13 @@ Flujo recomendado:
 ### Seguimiento general
 
 - Reseñas: las nueve citas de portada se cotejaron con sus originales en Google el 25/9/2026. Se ajustaron nombres y transcripcion, y se identificaron los extractos de Daniel, David Toledo y Karina Castillo Espinoza. Fuente: https://share.google/Uw4kQIBwLVKezKvHc. Se mantiene retirado el marcado Review/AggregateRating del negocio y los contadores y fechas relativas sin actualizacion automatica. El perfil de Google muestra la valoracion y cantidad vigentes.
-- Perfil de Google: el 27/9/2026 se confirmo aprobado el Instagram `ivnservicios.cl`. Se reenviaron El Bosque, La Granja, La Pintana, La Cisterna y Lo Espejo; se corrigio la seleccion de Lo Espejo para usar la comuna y no el sector de San Bernardo. Google muestra la cobertura pendiente de revision, sin el error previo. No se publicaron respuestas a opiniones durante esta comprobacion.
+- Perfil de Google: el 27/9/2026 se confirmaron aprobados el Instagram `ivnservicios.cl` y las cinco comunas El Bosque, La Granja, La Pintana, La Cisterna y Lo Espejo. Se corrigio Lo Espejo para usar la comuna y no el sector de San Bernardo. No se publicaron respuestas a opiniones durante esta comprobacion.
 - Search Console: el 27/9/2026 se confirmaron datos en el informe Consultas dentro de GA4, ademas de la vinculacion guardada. Los periodos y agregaciones de ambos productos deben compararse con cuidado.
 - Primera prueba de snippets: titulos mas breves y descripciones especificas para Puente Alto, Maipu, Providencia, La Florida y Quilicura. No cambia URLs, canonical, formularios ni diseno. Comparar rendimiento tras publicar y permitir un nuevo rastreo; Google puede usar otros textos en sus resultados. Las metricas de partida se conservan en un informe interno fuera del sitio.
 - Publicacion de esta prueba: commit `ca22870`, enviado a `main` el 27/9/2026. Las cinco URLs respondieron HTTP 200 y sus titulos y descripciones publicados coinciden con los archivos locales. Las fotos reales de oficinas siguen aplazadas por solicitud del usuario.
+- Revision adicional del 27/9/2026: Santiago Centro y Providencia muestran principalmente consultas generales; no hay evidencia suficiente para afirmar canibalizacion ni redirigirlas. Se acorto el titulo y se concreto la descripcion de Santiago Centro, conservando URL y contenido. Providencia mantiene la prueba ya publicada para no acumular cambios sin datos nuevos.
+- `control-de-plagas-poc.html` devuelve HTTP 404 y no figura en los archivos ni historial Git revisado. No se crea una redireccion a la portada ni se agrega al sitemap.
+- La conciliacion de eventos con solicitudes recibidas requiere iniciar sesion en Formspree. No se borraron datos historicos ni se contaron eventos como ventas. Evaluar los snippets tras un periodo comparable posterior al despliegue; la medicion anterior termina el 24/9 y no mide estos cambios.
 
 - Seguir monitoreando indexacion de las 81 URLs SEO publicables en Search Console.
 - Solicitar indexacion manual para paginas importantes no indexadas.
