@@ -1,4 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".footer__inner").forEach((footer) => {
+    if (footer.querySelector(".footer__directory")) return;
+
+    const links = [
+      ["Servicios", "/control-de-plagas/"],
+      ["Desratizaci&oacute;n", "/desratizacion-santiago.html"],
+      ["Sanitizaci&oacute;n", "/sanitizacion-santiago.html"],
+      ["Nosotros", "/nosotros.html"],
+      ["Cobertura", "/cobertura-santiago.html"]
+    ];
+    const navigation = document.createElement("nav");
+    navigation.className = "footer__directory";
+    navigation.setAttribute("aria-label", "Servicios y empresa");
+    navigation.innerHTML = links.map(([label, href]) => `<a href="${href}">${label}</a>`).join("");
+    footer.append(navigation);
+  });
+
   const toggle = document.querySelector(".nav__toggle, .menu-btn");
   const menu = document.querySelector(".nav__menu, #menu");
 
