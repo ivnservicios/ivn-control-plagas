@@ -1037,6 +1037,8 @@ input:focus, textarea:focus{
 
 /* FOOTER */
 .footer{padding:22px 0; border-top:1px solid var(--line);}
+.home-comunas .box:nth-child(n + 13){display:none}
+.section-actions{margin-top:24px}
 .footer__inner{
   display:flex; justify-content:space-between; align-items:center;
   gap:12px; color:var(--muted);
