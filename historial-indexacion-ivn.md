@@ -1,7 +1,7 @@
 # Historial de indexacion IVN Servicios
 
 Fecha de generacion: 2026-08-03
-Ultima actualizacion documental: 2026-09-27
+Ultima actualizacion documental: 2026-09-29
 Ultima comprobacion del listado: 2026-09-27, mediante exportacion de Paginas indexadas de Search Console (informe actualizado el 20/9/2026). No corresponde a 81 inspecciones individuales en tiempo real.
 
 Uso sugerido: revisar cada URL en Google Search Console con "Inspeccion de URL" y marcar el estado.
@@ -21,9 +21,16 @@ La exportacion de Paginas indexadas contiene 81 URLs unicas y coincide exactamen
 
 No se solicitaron nuevas indexaciones. Los estados reflejan el ultimo informe disponible, no garantizan permanencia en el indice ni posicionamiento. Fuente descargada: https___ivnservicios.cl_-Coverage-Valid-2026-09-27.zip, Tabla.csv.
 
+## Nuevas rutas de servicios - 29 de septiembre de 2026
+
+Estas dos URLs se agregaron al sitemap local despues de la comprobacion de 81 URLs. Se deben esperar o solicitar para rastreo tras el despliegue y solo marcar como indexadas cuando Search Console lo confirme.
+
+- [ ] https://ivnservicios.cl/control-de-plagas/
+- [ ] https://ivnservicios.cl/control-de-termitas/
+
 ## Resumen actualizado
 
-- Total de URLs SEO en sitemap: 81
+- Total de URLs SEO en sitemap: 83
 - Principal: 1
 - Servicios base: 4
 - Limpieza de oficinas: 1
@@ -32,7 +39,7 @@ No se solicitaron nuevas indexaciones. Los estados reflejan el ultimo informe di
 - Aguas servidas: 35
 - Indexadas confirmadas en el listado exportado: 81
 - Solicitudes enviadas y pendientes de Google: 0
-- Pendientes para revisar o solicitar otro dia: 0
+- Pendientes para revisar o solicitar otro dia: 2
 
 ## Principal
 

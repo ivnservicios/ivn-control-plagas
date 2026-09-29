@@ -10,7 +10,7 @@ El sitio esta orientado a SEO local, generacion de contactos por WhatsApp, formu
 - Dominio configurado en `CNAME`.
 - Hosting mediante GitHub Pages.
 - Sitemap enviado en Search Console: `https://ivnservicios.cl/sitemap.xml`.
-- Sitemap actual con 81 URLs SEO publicables.
+- Sitemap actual con 83 URLs SEO publicables: 81 previamente confirmadas como indexadas y dos nuevas rutas de servicios pendientes de rastreo tras su publicaci&oacute;n.
 - Google Analytics 4 instalado con ID `G-GFX96N4X42`.
 - Formulario principal conectado a Formspree.
 - Google Business Profile existente y administrado por IVN Servicios.
@@ -202,7 +202,7 @@ Sitemap activo:
 https://ivnservicios.cl/sitemap.xml
 ```
 
-Al 25 de septiembre de 2026, el sitemap local queda preparado con 81 URLs SEO publicables. Las URLs nuevas deben solicitarse o monitorearse en Search Console tras el despliegue.
+Al 29 de septiembre de 2026, el sitemap local queda preparado con 83 URLs SEO publicables. Las 81 rutas anteriores ya se confirmaron en Search Console; las rutas nuevas deben monitorearse tras el despliegue.
 
 Paginas confirmadas como indexadas durante el trabajo:
 
@@ -308,7 +308,7 @@ Flujo recomendado:
 - `control-de-plagas-poc.html` devuelve HTTP 404 y no figura en los archivos ni historial Git revisado. No se crea una redireccion a la portada ni se agrega al sitemap.
 - El 27/9/2026 se revisaron Inbox y Spam de Formspree y se compararon sus totales con GA4. El detalle permanece fuera del repositorio publico. Sin un identificador compartido no es posible conciliar retrospectivamente cada solicitud con cada evento. No se movieron ni borraron mensajes, ni se contaron eventos como ventas. Evaluar los snippets tras un periodo comparable posterior al despliegue; la medicion anterior termina el 24/9 y no mide estos cambios.
 
-- Seguir monitoreando indexacion de las 81 URLs SEO publicables en Search Console.
+- Seguir monitoreando indexacion de las 83 URLs SEO publicables en Search Console. Las 81 rutas anteriores fueron confirmadas; `/control-de-plagas/` y `/control-de-termitas/` requieren rastreo y posterior comprobaci&oacute;n.
 - Revision 27/9: las 81 URLs exportadas como indexadas coinciden exactamente con el sitemap; historial actualizado. Analisis y cambios de horario, snippets de portada, formularios y navegacion en `auditoria-seo-2026-09-27.md`. Fotos excluidas de este lote.
 - Solicitar indexacion manual para paginas importantes no indexadas.
 - Mantener Google Business Profile activo con fotos, publicaciones y respuestas a resenas.

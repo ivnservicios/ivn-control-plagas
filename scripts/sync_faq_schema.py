@@ -90,12 +90,12 @@ def main():
     total = 0
     # Validate every document before writing any changes.
     updates = []
-    for path in sorted(root.glob("*.html")):
+    for path in sorted(root.rglob("*.html")):
         source = path.read_bytes().decode("utf-8")
         result, entries = synchronize(source)
         total += entries
         if result != source:
-            changed.append(path.name)
+            changed.append(path.relative_to(root).as_posix())
             updates.append((path, result))
     if options.write:
         for path, result in updates:

@@ -4,11 +4,29 @@ from collections import Counter
 from html.parser import HTMLParser
 import json
 from pathlib import Path
-from urllib.parse import unquote, urlsplit
+from urllib.parse import unquote, urljoin, urlsplit
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent.parent
 ORIGIN = "https://ivnservicios.cl"
+
+
+def canonical_for_path(path):
+    if path == "index.html":
+        return ORIGIN + "/"
+    if path.endswith("/index.html"):
+        return ORIGIN + "/" + path.removesuffix("index.html")
+    return ORIGIN + "/" + path
+
+
+def local_target(source, value):
+    resolved = urlsplit(urljoin(canonical_for_path(source), value))
+    if resolved.scheme not in ("https", "http") or resolved.netloc not in ("", "ivnservicios.cl"):
+        return None, ""
+    target = unquote(resolved.path).lstrip("/")
+    if not target or target.endswith("/"):
+        target += "index.html"
+    return target, unquote(resolved.fragment)
 
 
 class Page(HTMLParser):
@@ -47,9 +65,10 @@ class Page(HTMLParser):
 def audit():
     errors = []
     pages = {}
-    for path in sorted(ROOT.glob("*.html")):
+    for path in sorted(ROOT.rglob("*.html")):
         try:
-            pages[path.name] = Page(path.read_text(encoding="utf-8-sig"))
+            relative = path.relative_to(ROOT).as_posix()
+            pages[relative] = Page(path.read_text(encoding="utf-8-sig"))
         except (ValueError, UnicodeError) as exc:
             errors.append(f"{path.name}: parsing failed: {exc}")
     sitemap = ET.parse(ROOT / "sitemap.xml")
@@ -76,22 +95,18 @@ def audit():
             value = attrs.get("href") if tag in ("a", "link") else attrs.get("src")
             if not value:
                 continue
-            parsed = urlsplit(value)
-            if parsed.scheme not in ("", "http", "https") or parsed.netloc not in ("", "ivnservicios.cl"):
+            target, fragment = local_target(name, value)
+            if target is None:
                 continue
-            target = unquote(parsed.path).lstrip("/") or (name if not parsed.netloc else "index.html")
-            if parsed.path == "/":
-                target = "index.html"
             if not (ROOT / target).is_file():
                 fail(f"missing local target: {value}")
             if tag == "a" and target in pages:
                 if target != name:
                     incoming[target] += 1
-                fragment = unquote(parsed.fragment)
                 if fragment and not any(a.get("id") == fragment for _, a in pages[target].tags):
                     fail(f"missing fragment: {value}")
         canonical = [a.get("href") for a in page.attrs("link") if a.get("rel") == "canonical"]
-        expected = ORIGIN + ("/" if name == "index.html" else "/" + name)
+        expected = canonical_for_path(name)
         if canonical != [expected]:
             fail("canonical mismatch")
         if expected in urls:
@@ -108,6 +123,8 @@ def audit():
                 fail("page outside sitemap lacks noindex")
     for url in urls:
         name = urlsplit(url).path.lstrip("/") or "index.html"
+        if name.endswith("/"):
+            name += "index.html"
         if name not in pages:
             errors.append(f"Sitemap target missing: {url}")
         elif not incoming[name]:
