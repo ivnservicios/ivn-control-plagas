@@ -23,10 +23,10 @@ No se solicitaron nuevas indexaciones. Los estados reflejan el ultimo informe di
 
 ## Nuevas rutas de servicios - 29 de septiembre de 2026
 
-Estas dos URLs se agregaron al sitemap local despues de la comprobacion de 81 URLs. Se deben esperar o solicitar para rastreo tras el despliegue y solo marcar como indexadas cuando Search Console lo confirme.
+Estas dos URLs se agregaron al sitemap local despues de la comprobacion de 81 URLs. La solicitud de indexacion se envio desde Search Console el 29 de septiembre de 2026; solo marcar como indexadas cuando Search Console lo confirme.
 
-- [ ] https://ivnservicios.cl/control-de-plagas/
-- [ ] https://ivnservicios.cl/control-de-termitas/
+- [-] https://ivnservicios.cl/control-de-plagas/
+- [-] https://ivnservicios.cl/control-de-termitas/
 
 ## Resumen actualizado
 
