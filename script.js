@@ -1,19 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".nav__menu").forEach((menu) => {
+    const isAboutPage = new URL(window.location.href).pathname === "/nosotros.html";
+    const aboutLink = Array.from(menu.querySelectorAll("a")).find(
+      (link) => new URL(link.href, window.location.origin).pathname === "/nosotros.html"
+    );
+
+    if (aboutLink) {
+      if (isAboutPage) aboutLink.setAttribute("aria-current", "page");
+      return;
+    }
+
+    const link = document.createElement("a");
+    link.href = "/nosotros.html";
+    link.textContent = "Nosotros";
+    if (isAboutPage) link.setAttribute("aria-current", "page");
+    menu.insertBefore(link, menu.querySelector("a.btn"));
+  });
+
   document.querySelectorAll(".footer__inner").forEach((footer) => {
     if (footer.querySelector(".footer__directory")) return;
 
     const links = [
-      ["Servicios", "/control-de-plagas/"],
+      ["Control de plagas", "/control-de-plagas/"],
       ["Desratizaci&oacute;n", "/desratizacion-santiago.html"],
-      ["Sanitizaci&oacute;n", "/sanitizacion-santiago.html"],
-      ["Nosotros", "/nosotros.html"],
-      ["Cobertura", "/cobertura-santiago.html"]
+      ["Sanitizaci&oacute;n", "/sanitizacion-santiago.html"]
     ];
     const navigation = document.createElement("nav");
     navigation.className = "footer__directory";
-    navigation.setAttribute("aria-label", "Servicios y empresa");
-    navigation.innerHTML = links.map(([label, href]) => `<a href="${href}">${label}</a>`).join("");
-    footer.append(navigation);
+    navigation.setAttribute("aria-label", "Servicios principales");
+    navigation.innerHTML = `<span class="footer__label">Servicios</span>${links.map(([label, href]) => `<a href="${href}">${label}</a>`).join("")}`;
+    footer.insertBefore(navigation, footer.querySelector(".footer__links"));
   });
 
   const toggle = document.querySelector(".nav__toggle, .menu-btn");
