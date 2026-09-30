@@ -37,3 +37,10 @@ Registro de cambios, validaciones y decisiones tecnicas relevantes. No incluye d
 - Se reforzo el boton `Ver todas las comunas atendidas` de la portada con color verde IVN, sombra ligera y flecha direccional.
 - Se actualizo la referencia de estilos de la portada para que el ajuste no dependa de cache del navegador.
 - Validaciones ejecutadas: auditoria del sitio sin errores, 13 pruebas aprobadas, sintaxis JavaScript valida y `git diff --check`.
+
+## 2026-09-29 - Contacto directo en Nosotros
+
+- Se rediseño el bloque de contacto del cierre de `nosotros.html` con encabezado, iconos y dos acciones directas: WhatsApp y correo.
+- Los datos se mantienen como enlaces funcionales, con etiquetas accesibles y sin agregar promesas de respuesta no verificadas.
+- Se actualizo la referencia de estilos de la pagina para evitar una vista antigua por cache.
+- Validaciones ejecutadas: auditoria del sitio sin errores, FAQ sincronizadas, 13 pruebas aprobadas, sintaxis JavaScript valida, `git diff --check` y revision visual local.
