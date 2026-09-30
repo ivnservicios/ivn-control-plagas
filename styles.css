@@ -400,6 +400,54 @@ a.hero-contact__item:hover .hero-contact__details span{
 }
 .list{margin:10px 0 0; padding-left:18px; color:var(--muted)}
 
+.coverage-directory .list{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:9px;
+  margin:16px 0 0;
+  padding:0;
+  list-style:none;
+}
+
+.coverage-directory .list a{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  min-height:42px;
+  padding:9px 11px;
+  border:1px solid rgba(22,163,74,.24);
+  border-radius:7px;
+  background:#f0fdf4;
+  color:#14532d;
+  font-weight:700;
+  line-height:1.2;
+  text-decoration:none;
+  transition:background .18s ease, border-color .18s ease, transform .18s ease;
+}
+
+.coverage-directory .list a::after{
+  content:"›";
+  color:var(--accent);
+  font-size:1.35rem;
+  line-height:1;
+}
+
+.coverage-directory .list a:hover{
+  background:#dcfce7;
+  border-color:rgba(22,163,74,.5);
+  transform:translateY(-1px);
+}
+
+.coverage-directory .list a:focus-visible{
+  outline:3px solid rgba(22,163,74,.35);
+  outline-offset:2px;
+}
+
+@media (max-width:560px){
+  .coverage-directory .list{grid-template-columns:1fr}
+}
+
 /* STEPS */
 .steps{
   margin-top:18px;
