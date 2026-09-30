@@ -31,3 +31,9 @@ Registro de cambios, validaciones y decisiones tecnicas relevantes. No incluye d
 - El pie ahora organiza la informacion en tres grupos: identificacion de IVN, enlaces de servicios y acciones generales (Instagram y subir al inicio).
 - Se verifico visualmente la lectura final: `IVN Servicios | Servicios | Control de plagas | Desratizacion | Sanitizacion | Instagram | Subir`.
 - Validaciones ejecutadas: auditoria del sitio sin errores, FAQ sincronizadas, 13 pruebas aprobadas, sintaxis JavaScript valida y `git diff --check`.
+
+## 2026-09-29 - CTA de cobertura
+
+- Se reforzo el boton `Ver todas las comunas atendidas` de la portada con color verde IVN, sombra ligera y flecha direccional.
+- Se actualizo la referencia de estilos de la portada para que el ajuste no dependa de cache del navegador.
+- Validaciones ejecutadas: auditoria del sitio sin errores, 13 pruebas aprobadas, sintaxis JavaScript valida y `git diff --check`.

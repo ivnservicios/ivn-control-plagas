@@ -1150,6 +1150,23 @@ input:focus, textarea:focus{
 .footer{padding:22px 0; border-top:1px solid var(--line);}
 .home-comunas .box:nth-child(n + 13){display:none}
 .section-actions{margin-top:24px}
+.btn--coverage{
+  background:linear-gradient(135deg,#15803d,#16a34a);
+  color:#ffffff;
+  border-color:#15803d;
+  box-shadow:0 10px 22px rgba(22,163,74,.2);
+}
+.btn--coverage::after{
+  content:"→";
+  margin-left:4px;
+  font-size:1.15em;
+  line-height:1;
+}
+.btn--coverage:hover{
+  color:#ffffff;
+  filter:brightness(1.04);
+  transform:translateY(-1px);
+}
 .footer__inner{
   display:grid;
   grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
