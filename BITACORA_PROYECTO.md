@@ -44,3 +44,11 @@ Registro de cambios, validaciones y decisiones tecnicas relevantes. No incluye d
 - Los datos se mantienen como enlaces funcionales, con etiquetas accesibles y sin agregar promesas de respuesta no verificadas.
 - Se actualizo la referencia de estilos de la pagina para evitar una vista antigua por cache.
 - Validaciones ejecutadas: auditoria del sitio sin errores, FAQ sincronizadas, 13 pruebas aprobadas, sintaxis JavaScript valida, `git diff --check` y revision visual local.
+
+## 2026-09-29 - Revision global de diseno
+
+- Se revisaron las 87 paginas HTML para comprobar salto al contenido, navegacion, contenido principal, footer, H1, CSS y JavaScript.
+- Se unifico la version de `styles.css` en todas las paginas para que el diseno actual no dependa de copias antiguas en cache.
+- Se actualizo `404.html` al patron actual de navbar con menu movil y footer organizado.
+- Revision visual representativa: 404 en movil, pagina por comuna, limpieza por aguas servidas y hub de servicios en escritorio; sin desbordamiento horizontal a 320 y 1280 px.
+- Validaciones ejecutadas: auditoria del sitio sin errores, FAQ sincronizadas, 13 pruebas aprobadas, sintaxis JavaScript valida y `git diff --check`.
