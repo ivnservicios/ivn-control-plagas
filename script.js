@@ -17,6 +17,33 @@ document.addEventListener("DOMContentLoaded", () => {
     menu.insertBefore(link, menu.querySelector("a.btn"));
   });
 
+  const heroFieldIcons = [
+    [/comuna|cobertura/i, "fa-location-dot"],
+    [/espacio/i, "fa-building"],
+    [/servicio/i, "fa-shield-halved"],
+    [/problema/i, "fa-bug"],
+    [/contacto/i, "fa-phone"]
+  ];
+
+  document.querySelectorAll(".service-hero__media > .card, .hero__grid > .card").forEach((card) => {
+    if (card.classList.contains("coordination-card") || card.classList.contains("direct-contact")) return;
+
+    const title = card.querySelector(":scope > h2");
+    if (!title || !title.textContent.trim().startsWith("Atención")) return;
+
+    card.classList.add("hero-info-card");
+    const heading = document.createElement("div");
+    heading.className = "hero-info-card__heading";
+    heading.innerHTML = '<span class="hero-info-card__icon" aria-hidden="true"><i class="fa-solid fa-headset"></i></span><div><p>Información del servicio</p></div>';
+    heading.lastElementChild.append(title);
+    card.insertBefore(heading, card.firstChild);
+
+    card.querySelectorAll(".mini__row > span").forEach((label) => {
+      const icon = heroFieldIcons.find(([pattern]) => pattern.test(label.textContent));
+      if (icon) label.insertAdjacentHTML("afterbegin", `<i class="fa-solid ${icon[1]}" aria-hidden="true"></i>`);
+    });
+  });
+
   document.querySelectorAll(".footer__inner").forEach((footer) => {
     if (footer.querySelector(".footer__directory")) return;
 

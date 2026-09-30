@@ -438,6 +438,62 @@ a.hero-contact__item:hover .hero-contact__details span{
   text-align:center;
 }
 
+.hero-info-card{
+  position:relative;
+  overflow:hidden;
+  padding:20px;
+  border-color:rgba(22,163,74,.22);
+  background:linear-gradient(145deg,#ffffff 0%,#f0fdf4 100%);
+}
+
+.hero-info-card::before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto;
+  height:4px;
+  background:var(--accent);
+}
+
+.hero-info-card__heading{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.hero-info-card__icon{
+  display:grid;
+  place-items:center;
+  width:42px;
+  height:42px;
+  flex:0 0 42px;
+  border-radius:12px;
+  background:#dcfce7;
+  color:#15803d;
+  font-size:1.15rem;
+}
+
+.hero-info-card__heading p{
+  margin:0 0 3px;
+  color:#166534;
+  font-size:.76rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.hero-info-card__heading h2{margin:0}
+.hero-info-card .mini{margin-top:16px}
+.hero-info-card .mini__row span{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.hero-info-card .mini__row i{
+  width:16px;
+  color:#15803d;
+  text-align:center;
+}
+
 @media (max-width: 520px){
   .mini__row{
     grid-template-columns:1fr;

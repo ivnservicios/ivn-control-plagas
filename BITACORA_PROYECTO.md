@@ -52,3 +52,11 @@ Registro de cambios, validaciones y decisiones tecnicas relevantes. No incluye d
 - Se actualizo `404.html` al patron actual de navbar con menu movil y footer organizado.
 - Revision visual representativa: 404 en movil, pagina por comuna, limpieza por aguas servidas y hub de servicios en escritorio; sin desbordamiento horizontal a 320 y 1280 px.
 - Validaciones ejecutadas: auditoria del sitio sin errores, FAQ sincronizadas, 13 pruebas aprobadas, sintaxis JavaScript valida y `git diff --check`.
+
+## 2026-09-29 - Tarjetas de atencion en paginas locales
+
+- Se detecto que las tarjetas `Atencion coordinada` de paginas por comuna seguian usando el formato visual anterior.
+- Se creo un componente comun para las tarjetas de cabecera cuyo titulo comienza con `Atencion`, con icono, etiqueta de contexto e iconos por tipo de dato (comuna, espacios, servicios, problema y contacto).
+- La informacion local existente se conserva; el ajuste es exclusivamente visual y se aplica de forma consistente a las plantillas que usan ese patron.
+- Se renovaron las referencias de CSS y JavaScript de las 87 paginas para evitar que el componente nuevo quede oculto por cache.
+- Validaciones ejecutadas: auditoria del sitio sin errores, FAQ sincronizadas, 13 pruebas aprobadas, sintaxis JavaScript valida, `git diff --check` y revision visual local de Maipu.
