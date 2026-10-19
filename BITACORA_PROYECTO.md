@@ -60,3 +60,9 @@ Registro de cambios, validaciones y decisiones tecnicas relevantes. No incluye d
 - La informacion local existente se conserva; el ajuste es exclusivamente visual y se aplica de forma consistente a las plantillas que usan ese patron.
 - Se renovaron las referencias de CSS y JavaScript de las 87 paginas para evitar que el componente nuevo quede oculto por cache.
 - Validaciones ejecutadas: auditoria del sitio sin errores, FAQ sincronizadas, 13 pruebas aprobadas, sintaxis JavaScript valida, `git diff --check` y revision visual local de Maipu.
+
+## 2026-10-19 - Perfil de Instagram actualizado
+
+- Se actualizo el enlace oficial de Instagram a `https://www.instagram.com/ivnservicios/` en la portada, pies de pagina, hubs de servicio, pagina Nosotros, limpieza de oficinas, datos estructurados y documentacion del proyecto.
+- Se confirmo que no quedan referencias al perfil anterior en el repositorio.
+- Validaciones ejecutadas: auditoria del sitio sin errores, 13 pruebas aprobadas, sintaxis JavaScript valida y `git diff --check`.

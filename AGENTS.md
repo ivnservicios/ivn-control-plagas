@@ -12,7 +12,7 @@ Mantener y mejorar `ivnservicios.cl` como sitio local de captacion para IVN Serv
 - Perfil de Google, sitio y datos de contacto deben mantenerse coherentes.
 - Horario vigente: lunes a sabado 07:00-23:30; domingo 10:00-23:30. Las visitas se coordinan segun disponibilidad.
 - Cobertura: Santiago, Region Metropolitana y sectores cercanos sujetos a coordinacion. No afirmar sucursales ni cobertura garantizada por comuna.
-- Contacto comercial: +56 9 5882 9194, `fnahuelpan@ivnservicios.cl`, Instagram `https://www.instagram.com/ivnservicios.cl/`.
+- Contacto comercial: +56 9 5882 9194, `fnahuelpan@ivnservicios.cl`, Instagram `https://www.instagram.com/ivnservicios/`.
 
 ## Estado conocido
 
