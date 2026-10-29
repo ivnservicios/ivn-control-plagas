@@ -66,3 +66,9 @@ Registro de cambios, validaciones y decisiones tecnicas relevantes. No incluye d
 - Se actualizo el enlace oficial de Instagram a `https://www.instagram.com/ivnservicios/` en la portada, pies de pagina, hubs de servicio, pagina Nosotros, limpieza de oficinas, datos estructurados y documentacion del proyecto.
 - Se confirmo que no quedan referencias al perfil anterior en el repositorio.
 - Validaciones ejecutadas: auditoria del sitio sin errores, 13 pruebas aprobadas, sintaxis JavaScript valida y `git diff --check`.
+
+## 2026-10-29 - Identidad visible y horario de atencion
+
+- Se incorporo el texto `IVN Servicios` junto al logo en los encabezados del sitio para reforzar la identidad de marca de forma consistente.
+- En la portada, el horario vigente se transformo en un bloque visual legible con sus dos tramos de atencion y la nota de coordinacion de visitas.
+- Se corrigio el identificador visible de Instagram en la portada a `@ivnservicios`.

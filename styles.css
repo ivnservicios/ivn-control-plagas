@@ -1406,10 +1406,77 @@ input:focus, textarea:focus{
   width:auto;
 }
 
+.logo__name{
+  color:#2f8a3a;
+  font-size:1.22rem;
+  font-weight:850;
+  line-height:1.1;
+  text-shadow:0 1px 0 rgba(255,255,255,.72);
+  white-space:nowrap;
+}
+
+.hero-contact__hours{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:14px;
+  padding:12px;
+  border:1px solid rgba(22,163,74,.24);
+  border-radius:14px;
+  background:linear-gradient(135deg, rgba(220,252,231,.82), rgba(240,253,244,.96));
+  color:#14532d;
+}
+
+.hero-contact__hours-icon{
+  display:inline-flex;
+  flex:0 0 38px;
+  align-items:center;
+  justify-content:center;
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  background:#ffffff;
+  color:#15803d;
+  box-shadow:0 5px 12px rgba(22,101,52,.10);
+}
+
+.hero-contact__hours > span:last-child{
+  min-width:0;
+}
+
+.hero-contact__hours strong,
+.hero-contact__hours > span:last-child > span{
+  display:block;
+}
+
+.hero-contact__hours strong{
+  margin-bottom:3px;
+  color:#14532d;
+  font-size:.93rem;
+}
+
+.hero-contact__hours > span:last-child > span{
+  color:#36564a;
+  font-size:.86rem;
+  line-height:1.45;
+}
+
+.hero-contact__hours b{
+  color:#14532d;
+  white-space:nowrap;
+}
+
+.hero-contact__hours-note{
+  margin:7px 0 0;
+  color:var(--muted);
+  font-size:.82rem;
+}
+
 @media (max-width: 768px){
   .logo img{
     height:40px;        /* tamano movil */
   }
+  .logo__name{font-size:1rem}
   .wa-float{
     right:14px;
     bottom:14px;
